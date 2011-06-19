@@ -1,0 +1,10 @@
+project D_Paraula is
+
+   for Object_Dir use "Objects";
+
+   package Naming is
+      for Casing use "MixedCase";
+   end Naming;
+
+end D_Paraula;
+

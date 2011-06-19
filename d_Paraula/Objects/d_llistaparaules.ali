@@ -1,0 +1,123 @@
+V "GNAT Lib v4.4"
+A -gnatA
+P SS ZX
+R nnnvnnnvnnnnnnnnnnvnnnvnnnvnvnnnnnnnnnnnnvnnnnnnnnnnnnnvnnvnvnnnnnnnnnnnnnnnn
+
+U d_llistaparaules%b	d_llistaparaules.adb	898d53c0 NE OO PK IL
+W ada%s			ada.ads			ada.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W d_paraula%s		d_paraula.adb		d_paraula.ali
+
+U d_llistaparaules%s	d_llistaparaules.ads	d037186c EE OO PK IL
+W ada%s			ada.ads			ada.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W d_paraula%s		d_paraula.adb		d_paraula.ali
+W system%s		system.ads		system.ali
+W system.exception_table%s  s-exctab.adb	s-exctab.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+
+D ada.ads		20070406091342 9c7dd3ea
+D a-except.ads		20090409232307 b54b55de
+D a-finali.ads		20090409232307 9eaacebd
+D a-filico.ads		20090409232307 9299732a
+D a-inteio.ads		20070406091342 03bc737c
+D a-ioexce.ads		20070406091342 be0900a0
+D a-stream.ads		20090409232307 34aca5be
+D a-tags.ads		20090409232307 bfa07446
+D a-textio.ads		20090409232307 fe8af46e
+D a-tiinio.ads		20090409232307 949a7272
+D a-unccon.ads		20070406091342 51e09df2
+D d_llistaparaules.ads	20110618153528 6494cc1a
+D d_llistaparaules.adb	20110618154712 59ba4bac
+D d_paraula.ads		20110618140820 49955364
+D interfac.ads		20090409232307 a69cad5c
+D i-cstrea.ads		20090409232307 e1e064a9
+D system.ads		20110401034433 15e10948
+D s-crtl.ads		20090409232307 997234a1
+D s-exctab.ads		20090409232307 5c1c61ae
+D s-ficobl.ads		20090409232307 8bb681e5
+D s-finimp.ads		20090409232307 9449f4cb
+D s-finroo.ads		20090409232307 1408f9d1
+D s-parame.ads		20090409232307 f32e56e9
+D s-secsta.ads		20090409232307 7bae3621
+D s-soflin.ads		20090409232307 0c6fd39d
+D s-stache.ads		20090409232307 257b3be8
+D s-stalib.ads		20090409232307 52b793d5
+D s-stoele.ads		20090409232307 ed966df3
+D s-stoele.adb		20090409232307 e9998c78
+D s-stratt.ads		20090409232307 fef7c1da
+D s-traent.ads		20090409232307 bd5f2753
+D s-unstyp.ads		20090409232307 c0f9fae5
+D s-wchcon.ads		20090409232307 ab028799
+X 1 ada.ads
+16K9*Ada 19e8 12|1r17 1r38 2r16 2r37 13|1r17 1r38 2r16 2r37
+X 5 a-inteio.ads
+18K13*Integer_Text_IO[10|45] 12|1w21 2r20 13|1w21 2r20
+X 9 a-textio.ads
+48K13*Text_IO 506e16 12|1w42 2r41 13|1w42 2r41
+166U14*New_Line 13|106r10 121r19 121r28 129r37 130r19 130r28
+208U14*Put 13|111r10 126r22
+X 12 d_llistaparaules.ads
+3K9*d_llistaparaules 35l5 35e21 13|3b14 163l5 163t21
+5R9*LlistaParaules 9r33 10r29 11r31 12r27 14r27 22c9 24e14 13|5r33 11r29
+. 37r31 43r45 49r35 67r14 142r27 156r27
+7E9*e_Ordre 7e43 12r46 13|142r46
+7n21*Ascendent{7E9} 13|110r51 125r63 146r14 149r15
+7n32*Descendent{7E9}
+9U14*LlistaBuida 9<26 13|5b14 9l8 9t19
+9r26 L{5R9} 13|5b26 7m7 8m7
+10U14*Posa 10=19 10>45 13|11b14 34l8 34t12 103r10 120r19
+10r19 L{5R9} 13|11b19 16r10 16r30 17m10 18r10 18r37 19r10 20m10 20r22 27r33
+. 30r10 31m10
+10r45 P{14|5R9} 13|11b45 19r28 26r30
+11U14*Ordena 11=21 13|37b14 140l8 140t14
+11r21 L{5R9} 13|37b21 98r10 99r28
+12U14*Escriu 12>21 12>43 13|110r38 125r50 142b14 153l8 153t14
+12r21 L{5R9} 13|142b21 145r10 145r30 146r32 146r50
+12e43 E{7E9} 13|142b43 146r10 149r13
+14V13*esBuida{boolean} 14>21 13|110r17 125r29 156b13 161l8 161t15
+14r21 L{5R9} 13|156b21 159r10 159r30
+18R9 nLlista 20r31 26c9 29e14 13|17r26 24r28
+20P9 Ptr_nLlista(18R9) 23r23 27r18 13|14r19 51r13 65r10 143r10
+23p7*Primer{20P9} 13|7m9 16r12 17m12 18m12 18m39 19m12 20r24 53r16 78m19
+. 83m19 84m19 98r12 116r45 145r12 146r34 159r12
+23p15*Darrer{20P9} 13|8m9 16r32 20m12 27r35 30m12 31m12 79m19 88m19 89m19
+. 145r32 146r52 159r32
+27p7*succ{20P9} 13|18m23 25m25 30m23 58r20 77r35 83r32 87r19 89m26 92r27
+. 104r17 133r23 149r41
+27p12*pred{20P9} 13|18m50 27m25 77r16 82r19 84m26 88r32 92m16 149r63
+28r7*P{14|5R9} 13|19m23 26m25 56r39 102r34 103r31 118r40 120r39 148r30
+33X4 error_LlistaBuida 13|145r57
+X 13 d_llistaparaules.adb
+14p7 nodeLlista{12|20P9} 24m10 25r10 26r10 27r10 30r31 31r22
+39E15 c_index{character} 43r33 108r25 115r19 123r19
+43A12 d_Cistella(12|5R9)<character> 45r19
+45a9 Cistella{43A12} 103m15 109r26 116r22 120m24 124r26
+46i9 l_max{integer} 99m6 102r36 113r26
+49V16 max_longitud{integer} 49b16 49>29 63l11 63t23 99r15
+49r29 L{12|5R9} 53r14
+50i10 Max{integer} 54m10 57r19 57m29 61r17
+50i14 n{integer} 56m13 57r17 57r34
+51p10 nP{12|20P9} 53m10 55r17 56r36 58m13 58r17
+65p7 nP{12|20P9} 77r13 77r32 82r16 83r29 87r16 88r29 92r13 92r24 98m6 101r13
+. 102r31 103r28 104m10 104r14 116m35 117r20 118r37 120r36 133m16 133r20
+66e7 c{character} 102m10 103r24 118m16 119r20 120r33
+67r7 L_act{12|5R9} 78m13 79m13 83m13 84r13 84r19 88m13 89r13 89r19 109m17
+. 110r25 110r45 116m13 116r39 124m17 125r37 125r57
+69U17 treu_de_cistella 69b17 95l11 95t27 129r19
+108e20 i{39E15} 109r35
+113i10 n{integer} 118r42
+115e14 i{39E15} 116r31 119r25
+123e14 i{39E15} 124r35
+143p7 p{12|20P9} 146m29 146m47 147r13 148r24 149m30 149r35 149m52 149r57
+X 14 d_paraula.ads
+3K9*d_Paraula 12|1w6 2r5 28r10 13|1w6 2r5 56r16 102r13 118r19 148r10 14|25e14
+5R9*Paraula 12|10r51 28r20 13|11r51 14|21e14
+8U14*Put 13|148r20
+11V13*charPos{character} 13|102r23 118r29
+12V13*llargaria{integer} 13|56r26
+
