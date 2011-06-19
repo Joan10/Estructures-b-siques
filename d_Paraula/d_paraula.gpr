@@ -1,0 +1,13 @@
+project D_Paraula is
+
+   for Object_Dir use "Objects";
+
+   package Naming is
+      for Casing use "MixedCase";
+   end Naming;
+
+   for Main use ("d_llistaparaules.adb", "d_llistaparaules.ads", "d_paraula.adb", "d_paraula.ads", "Programa.adb");
+   for Source_Files use ("d_paraula.adb", "d_llistaparaules.adb", "d_llistaparaules.ads", "d_paraula.ads", "Programa.adb");
+
+end D_Paraula;
+
