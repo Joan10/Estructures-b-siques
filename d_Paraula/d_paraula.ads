@@ -4,9 +4,9 @@ package d_Paraula is
 
    type Paraula is private;
 
-   procedure Get(P: out Paraula; F: in File_Type);
-   procedure Put(P: in Paraula);
-   function quedenParaules(F: in file_type) return boolean;
+   procedure Get(P: out Paraula; F: in File_Type); --Get d'una paraula des d'un fitxer.
+   procedure Put(P: in Paraula); --Imprimeix per pantalla una paraula.
+   function quedenParaules(F: in file_type) return boolean; --Retorna cert si queden paraules al fitxer.
 
    function charPos(P: in Paraula; Pos: in integer) return character; --funció que retorna el caràcter de la posició entrada
    function llargaria(P: in Paraula) return integer; --retorna la llargària de la paraula
@@ -16,7 +16,7 @@ private
    type v_Paraula is array (1..MAX) of character;
 
    type Paraula is record
-      v_p: v_Paraula; --Vector de paraules.
+      v_p: v_Paraula;   --Vector de paraules.
       n: integer;	-- Comptador de caràcters de la paraula.
    end record;
 

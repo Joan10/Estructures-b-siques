@@ -20,7 +20,7 @@ package body d_Paraula is
       end loop;
 
       for i in P.n+1..MAX loop --omplim els espais que sobren amb el valor anterior a 'a'
-      	P.v_p(i):=character'val(96);
+      	P.v_p(i):=character'val(32);
       end loop;
 
 
@@ -48,12 +48,12 @@ package body d_Paraula is
 	return not(end_of_file(F));
    end quedenParaules;
 
-   function llargaria(P: in Paraula) return integer is
+   function llargaria(P: in Paraula) return integer is --Retorna el nombre de caràcters d'una paraula
    begin
       return P.n;
    end llargaria;
 
-   function charPos(P: in Paraula; Pos: in integer) return character is
+   function charPos(P: in Paraula; Pos: in integer) return character is --retorna el caràcter de la paraula que cau a la posició passada.
    begin
       return P.v_p(Pos);
    end charPos;

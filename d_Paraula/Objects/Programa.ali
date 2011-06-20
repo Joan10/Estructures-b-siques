@@ -25,11 +25,11 @@ D a-tags.ads		20090409232307 bfa07446
 D a-textio.ads		20090409232307 fe8af46e
 D a-tiinio.ads		20090409232307 949a7272
 D a-unccon.ads		20070406091342 51e09df2
-D d_llistaparaules.ads	20110619193640 6494cc1a
-D d_paraula.ads		20110619190145 49955364
+D d_llistaparaules.ads	20110620101755 6494cc1a
+D d_paraula.ads		20110620100950 49955364
 D interfac.ads		20090409232307 a69cad5c
 D i-cstrea.ads		20090409232307 e1e064a9
-D Programa.adb		20110619212254 f50fd011
+D Programa.adb		20110620101811 f50fd011
 D system.ads		20110401034433 15e10948
 D s-crtl.ads		20090409232307 997234a1
 D s-exctab.ads		20090409232307 5c1c61ae
@@ -65,13 +65,13 @@ X 10 a-textio.ads
 166U14*New_Line 17|17r4 19r4 19r14 21r4 23r4 23r14
 223U14*Get_Immediate 17|25r4
 X 13 d_llistaparaules.ads
-3K9*d_llistaparaules 35e21 17|1w16 1r48 5r7
-5R9*LlistaParaules 24e14 17|5r24
+3K9*d_llistaparaules 45e21 17|1w16 1r48 5r7
+5R9*LlistaParaules 35e14 17|5r24
 7n21*Ascendent{7E9} 17|16r14 22r14
 7n32*Descendent{7E9} 17|18r14 24r14
-10U14*Posa 17|14r7
-11U14*Ordena 17|20r4
-12U14*Escriu 17|16r4 18r4 22r4 24r4
+12U14*Posa 17|14r7
+15U14*Ordena 17|20r4
+18U14*Escriu 17|16r4 18r4 22r4 24r4
 X 14 d_paraula.ads
 3K9*d_Paraula 25e14 17|1w6 1r38 4r7 13r7
 5R9*Paraula 21e14 17|4r17

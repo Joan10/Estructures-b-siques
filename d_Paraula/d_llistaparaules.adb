@@ -36,18 +36,20 @@ package body d_llistaparaules is
 
 
    procedure Ordena(L: in out LlistaParaules) is
+      --Procediment que ordena la llista de paraules passada.
 
-      subtype c_index is character range character'val(96)..'z';
+      subtype c_index is character range character'val(32)..'z';
       --subtipus emprat per indexar el vector.
       --Empram aquest i no el caràcter per si ens embullam amb els indexos que el compilador ens avisi.
 
-      type d_Cistella is array (c_index) of LlistaParaules; --Declaram el tipus cistella, que és un vector indexat per caracters.
+      type d_Cistella is array (c_index) of LlistaParaules;
+      --Declaram el tipus cistella, que és un vector indexat per caracters.
 
 	Cistella: d_Cistella;
 	l_max:integer;
 
-      --funció que retorna la longitud màxima de les paraules d'una llista.
       function max_longitud(L: in LlistaParaules) return integer is
+      --funció que retorna la longitud màxima de les paraules d'una llista.
      	 Max,n: integer;
      	 nP:Ptr_nLlista;
       begin
@@ -130,6 +132,7 @@ package body d_llistaparaules is
          end proximNoBuit;
 
       begin
+
          i := proximNoBuit(i, Cistella);
          succ_i := proximNoBuit(i, Cistella);
 
@@ -177,11 +180,12 @@ package body d_llistaparaules is
             end loop;
       	 end loop;
      end loop;
-
-      GeneraLlistaOrdenada(L,Cistella);
+     GeneraLlistaOrdenada(L,Cistella);
  end Ordena;
 
    procedure Escriu(L: in LlistaParaules; E: e_Ordre) is
+   --Escriu una llista de paraules amb l'ordre passat.
+
       p: Ptr_nLLista;
    begin
       if L.Primer = null and L.Darrer = null then raise error_LlistaBuida; end if;
@@ -196,6 +200,7 @@ package body d_llistaparaules is
 
 
    function esBuida(L: in LlistaParaules) return boolean is
+      --retorna cert si la llista és buida.
    begin
 
       if L.Primer = null and L.Darrer = null then return true; end if;

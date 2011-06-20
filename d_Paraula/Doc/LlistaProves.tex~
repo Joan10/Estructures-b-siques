@@ -1,0 +1,60 @@
+\documentclass[a4paper,10pt]{article}
+%\documentclass[a4paper,10pt]{scrartcl}
+
+\usepackage[utf8x]{inputenc}
+
+\title{ \rule{100mm}{0.3mm} \\ \vspace{3 mm} Pràctica Estructures de la informació:
+\\ \textbf{Ordenació per Binsort} \rule{100mm}{0.3mm} }
+\author{Joan Francesc Arbona Pérez}
+\date{20 de juny de 2011}
+
+\pdfinfo{%
+  /Title    (Ordenació per Binsort)
+  /Author   ()
+  /Creator  ()
+  /Producer ()
+  /Subject  ()
+  /Keywords ()
+}
+
+\begin{document}
+\maketitle
+\newpage
+\section{Proves}
+\subsection{Primera prova:}
+\vspace{5mm}
+ Text d'entrada: \newline \rule[3mm]{120mm}{0.1mm}  \\[2 mm]
+The First Roumanian American congregation is an Orthodox Jewish congregation
+that for more than years occupied a historic building pictured at Rivington
+Street on the Lower East Side of Manhattan, New York. Those who organized the
+congregation in were part of a wave of RomanianJewish immigrants who settled
+mostly in this precinct. The building had previously been a church, then a
+synagogue, and then a church again. It was transformed into a synagogue for a
+second time and extensively remodeled when the First Roumanian-American
+congregation purchased it in The synagogue's high ceiling, good acoustics, and
+seating for up to 1,800 people made it famous as the Cantor's Carnegie Hall. The
+congregation's membership was in the thousands in the 1940s, but by the early
+2000s had declined to around 40 as Jews moved out of the Lower East Side. Though
+its building was listed on the National Register of Historic Places in 1998, the
+congregation was reluctant to accept outside assistance in maintaining it. In
+January 2006, the roof collapsed and the building was demolished two.
+\\[20 mm]
+Text de sortida:  \newline \rule[3mm]{120mm}{0.1mm}  \\[2 mm]
+1 1998 1940s 2000s 2006 40 800 American Cantor's Carnegie East East First First
+Hall Historic In It January Jewish Jews Lower Lower Manhattan National New
+Orthodox Places Register Rivington RomanianJewish Roumanian Roumanian-American
+Side Side Street The The The The Those Though York a a a a a a a accept
+acoustics again an and and and and around assistance as as at been building
+building building building but by ceiling church church collapsed congregation
+congregation congregation congregation congregation congregation's declined
+demolished early extensively famous for for for good had had high historic
+immigrants in in in in in in in into is it it it its listed made maintaining
+membership more mostly moved occupied of of of of of on on organized out outside
+part people pictured precinct previously purchased reluctant remodeled roof
+seating second settled synagogue synagogue synagogue's than that the the the the
+the the the the the the the the then then this thousands time to to to
+transformed two up was was was was was wave were when who who years
+
+
+
+\end{document}

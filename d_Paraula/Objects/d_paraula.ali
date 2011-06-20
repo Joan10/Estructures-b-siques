@@ -1,10 +1,9 @@
 V "GNAT Lib v4.4"
-A -g
 A -gnatA
 P SS ZX
 R nnnnnnnvnnnnnnnvnnvnnnvnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnvnvnnnnnnnnnnnnnnnn
 
-U d_paraula%b		d_paraula.adb		4b59246c NE OO PK
+U d_paraula%b		d_paraula.adb		744e2867 NE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
@@ -32,8 +31,8 @@ D a-tags.ads		20090409232307 bfa07446
 D a-textio.ads		20090409232307 fe8af46e
 D a-tiinio.ads		20090409232307 949a7272
 D a-unccon.ads		20070406091342 51e09df2
-D d_paraula.ads		20110619190145 49955364
-D d_paraula.adb		20110619190145 fffaf01a
+D d_paraula.ads		20110620100950 49955364
+D d_paraula.adb		20110620102436 c0edfc11
 D interfac.ads		20090409232307 a69cad5c
 D i-cstrea.ads		20090409232307 e1e064a9
 D system.ads		20110401034433 15e10948
