@@ -1,0 +1,30 @@
+--
+-- Generated Gpr file - do not edit!
+--
+-- NOCDDL
+
+project Pila is
+
+   for Object_Dir use "../build";
+   for Exec_Dir use "../dist";
+   for Main use ("Pila_1.adb");
+   for Source_Dirs use ("/home/joan/Escriptori/Pila/src/**","/home/joan/Escriptori/Pila/test/**");
+
+   package Builder is
+      for Executable ("Pila_1.adb") use "Pila";
+   end Builder;
+
+   package Naming is
+      for Specification_Suffix ("ada") use ".ads";
+      for Implementation_Suffix ("ada") use ".adb";
+      for Separate_Suffix use ".adb";
+      for Casing use "MixedCase";
+   end Naming;
+
+   package Compiler is
+      for Default_Switches ("ada") use ("-gnat95");
+   end Compiler;
+
+   for Languages use ("Ada", "C", "C++");
+
+end Pila;

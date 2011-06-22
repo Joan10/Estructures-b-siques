@@ -1,0 +1,76 @@
+V "GNAT Lib v4.4"
+M P W=b
+A -gnat95
+A -gnatA
+P SS ZX
+R nnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnn
+
+U pila%b		Pila.adb		9a102ad7 NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W c_pila%s		C_Pila.adb		C_Pila.ali
+
+D ada.ads		20070406091342 9c7dd3ea
+D a-except.ads		20090409232307 b54b55de
+D a-finali.ads		20090409232307 9eaacebd
+D a-filico.ads		20090409232307 9299732a
+D a-inteio.ads		20070406091342 03bc737c
+D a-ioexce.ads		20070406091342 be0900a0
+D a-stream.ads		20090409232307 34aca5be
+D a-tags.ads		20090409232307 bfa07446
+D a-textio.ads		20090409232307 fe8af46e
+D a-tiinio.ads		20090409232307 949a7272
+D a-unccon.ads		20070406091342 51e09df2
+D C_Pila.ads		20110221172527 21cb7432
+D interfac.ads		20090409232307 a69cad5c
+D i-cstrea.ads		20090409232307 e1e064a9
+D Pila.adb		20110221180958 46edd9f7
+D system.ads		20100911234204 15e10948
+D s-crtl.ads		20090409232307 997234a1
+D s-exctab.ads		20090409232307 5c1c61ae
+D s-ficobl.ads		20090409232307 8bb681e5
+D s-finimp.ads		20090409232307 9449f4cb
+D s-finroo.ads		20090409232307 1408f9d1
+D s-parame.ads		20090409232307 f32e56e9
+D s-secsta.ads		20090409232307 7bae3621
+D s-soflin.ads		20090409232307 0c6fd39d
+D s-stache.ads		20090409232307 257b3be8
+D s-stalib.ads		20090409232307 52b793d5
+D s-stoele.ads		20090409232307 ed966df3
+D s-stoele.adb		20090409232307 e9998c78
+D s-stratt.ads		20090409232307 fef7c1da
+D s-traent.ads		20090409232307 bd5f2753
+D s-unstyp.ads		20090409232307 c0f9fae5
+D s-wchcon.ads		20090409232307 ab028799
+X 1 ada.ads
+16K9*Ada 19e8 15|12r6 12r23 13r6 13r31 27r9 43r5 64r9 65r9
+X 5 a-inteio.ads
+18K13*Integer_Text_IO[10|45] 15|13w10 13r35
+X 9 a-textio.ads
+48K13*Text_IO 506e16 15|12w10 12r27 27r13 43r9 64r13 65r13
+166U14*New_Line 15|31r17 42r5 83r5
+208U14*Put 15|30r17 64r21 65r21
+223U14*Get_Immediate 15|28r9 82r5
+263U14*Put_Line 15|27r21 43r17 44r5 45r5 46r5 47r5 48r5 49r5 50r5 68r13 70r13
+X 12 C_Pila.ads
+17K9*C_Pila 40e11 15|14w6 14r18 22r9 23r10 24r32 29r9 34r35 37r9 54r5 55r5
+. 75r9
+19R10*Pila 38e23 15|22r16 23r17 24r39 34r42
+21U15*pBuida 15|54r12 55r12 75r16
+22U15*Empila 15|29r16
+23U15*Desempila 15|37r16
+24V14*Cim{character} 15|64r25 65r25
+25V14*esBuida{boolean} 15|67r12
+X 15 Pila.adb
+20U11*Pila 20b11 85l5 85t9
+21e5 o{character} 28m23 29r25 30r21 58r11 59r9 61r11 63r11 66r11 73r11 76r11
+. 78r11 82m19
+22r5 P1{12|19R10} 54m19 60m16 62m19 64r29 67r20 75m23
+23r5 P2{12|19R10} 55m19 65r29 77m16 79m19
+24U15 Empila 24b15 24=22 32l9 32t15 60r9 77r9
+24r22 P{12|19R10} 29m23
+34U15 Desempila 34b15 34=25 38l9 38t18 62r9 79r9
+34r25 P{12|19R10} 37m26
+40U15 Menu 40b15 51l9 51t13 81r5
+

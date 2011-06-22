@@ -1,0 +1,69 @@
+V "GNAT Lib v4.4"
+M P W=b
+A -gnat95
+A -gnatA
+P SS ZX
+R nnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnn
+
+U coa%b			Coa.adb			c66719b4 NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W c_coa%s		C_Coa.adb		C_Coa.ali
+
+D ada.ads		20070406091342 9c7dd3ea
+D a-except.ads		20090409232307 b54b55de
+D a-finali.ads		20090409232307 9eaacebd
+D a-filico.ads		20090409232307 9299732a
+D a-inteio.ads		20070406091342 03bc737c
+D a-ioexce.ads		20070406091342 be0900a0
+D a-stream.ads		20090409232307 34aca5be
+D a-tags.ads		20090409232307 bfa07446
+D a-textio.ads		20090409232307 fe8af46e
+D a-tiinio.ads		20090409232307 949a7272
+D a-unccon.ads		20070406091342 51e09df2
+D C_Coa.ads		20110301171325 f9b1e922
+D Coa.adb		20110301171203 c2e07784
+D interfac.ads		20090409232307 a69cad5c
+D i-cstrea.ads		20090409232307 e1e064a9
+D system.ads		20100911234204 15e10948
+D s-crtl.ads		20090409232307 997234a1
+D s-exctab.ads		20090409232307 5c1c61ae
+D s-ficobl.ads		20090409232307 8bb681e5
+D s-finimp.ads		20090409232307 9449f4cb
+D s-finroo.ads		20090409232307 1408f9d1
+D s-parame.ads		20090409232307 f32e56e9
+D s-secsta.ads		20090409232307 7bae3621
+D s-soflin.ads		20090409232307 0c6fd39d
+D s-stache.ads		20090409232307 257b3be8
+D s-stalib.ads		20090409232307 52b793d5
+D s-stoele.ads		20090409232307 ed966df3
+D s-stoele.adb		20090409232307 e9998c78
+D s-stratt.ads		20090409232307 fef7c1da
+D s-traent.ads		20090409232307 bd5f2753
+D s-unstyp.ads		20090409232307 c0f9fae5
+D s-wchcon.ads		20090409232307 ab028799
+X 1 ada.ads
+16K9*Ada 19e8 13|11r6 11r23 12r6 12r31 28r5 41r9 49r9
+X 5 a-inteio.ads
+18K13*Integer_Text_IO[10|45] 13|12w10 12r35
+X 9 a-textio.ads
+48K13*Text_IO 506e16 13|11w10 11r27 28r9 41r13 49r13
+166U14*New_Line 13|27r5 45r17 59r5
+208U14*Put 13|44r17 49r21
+223U14*Get_Immediate 13|42r9 58r5
+263U14*Put_Line 13|28r17 29r5 30r5 31r5 32r5 33r5 41r21 52r13 54r13
+X 12 C_Coa.ads
+17K9*C_Coa 40e10 13|13w6 13r17 21r8 37r5 43r9 47r9 49r25
+19R10*Coa 38e23 13|21r14
+21U15*cBuida 13|37r11
+22U15*Posa 13|43r15
+23U15*EliminaPrimer 13|47r15
+24V14*SelPrimer{character} 13|49r31
+25V14*esBuida{boolean} 13|51r12
+X 13 Coa.adb
+19U11*Coa 19b11 61l5 61t8
+20e5 o{character} 39r11 40r9 42m23 43r22 44r21 46r11 48r11 50r11 58m19
+21r5 C{12|19R10} 37m18 43m20 47m29 49r41 51r20
+25U15 Menu 25b15 34l9 34t13 57r5
+
