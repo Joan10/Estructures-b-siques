@@ -1,0 +1,93 @@
+V "GNAT Lib v4.4"
+A -gnatA
+P SS ZX
+R nnnnnnnvnnnnnnnvnnvnnnvnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnvnvnnnnnnnnnnnnnnnn
+
+U d_paraula%b		d_paraula.adb		744e2867 NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W interfaces%s		interfac.ads		interfac.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+
+U d_paraula%s		d_paraula.ads		b4a3d476 EE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W system%s		system.ads		system.ali
+W system.exception_table%s  s-exctab.adb	s-exctab.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+
+D ada.ads		20070406091342 9c7dd3ea
+D a-except.ads		20090409232307 b54b55de
+D a-finali.ads		20090409232307 9eaacebd
+D a-filico.ads		20090409232307 9299732a
+D a-inteio.ads		20070406091342 03bc737c
+D a-ioexce.ads		20070406091342 be0900a0
+D a-stream.ads		20090409232307 34aca5be
+D a-tags.ads		20090409232307 bfa07446
+D a-textio.ads		20090409232307 fe8af46e
+D a-tiinio.ads		20090409232307 949a7272
+D a-unccon.ads		20070406091342 51e09df2
+D d_paraula.ads		20110620100950 49955364
+D d_paraula.adb		20110620102436 c0edfc11
+D interfac.ads		20090409232307 a69cad5c
+D i-cstrea.ads		20090409232307 e1e064a9
+D system.ads		20110401034433 15e10948
+D s-crtl.ads		20090409232307 997234a1
+D s-exctab.ads		20090409232307 5c1c61ae
+D s-ficobl.ads		20090409232307 8bb681e5
+D s-finimp.ads		20090409232307 9449f4cb
+D s-finroo.ads		20090409232307 1408f9d1
+D s-parame.ads		20090409232307 f32e56e9
+D s-secsta.ads		20090409232307 7bae3621
+D s-soflin.ads		20090409232307 0c6fd39d
+D s-stache.ads		20090409232307 257b3be8
+D s-stalib.ads		20090409232307 52b793d5
+D s-stoele.ads		20090409232307 ed966df3
+D s-stoele.adb		20090409232307 e9998c78
+D s-stratt.ads		20090409232307 fef7c1da
+D s-traent.ads		20090409232307 bd5f2753
+D s-unstyp.ads		20090409232307 c0f9fae5
+D s-wchcon.ads		20090409232307 ab028799
+X 1 ada.ads
+16K9*Ada 19e8 12|1r6 1r23 2r6 2r31 13|1r6 1r23 2r6 2r31
+X 5 a-inteio.ads
+18K13*Integer_Text_IO[10|45] 12|2w10 2r35 13|2w10 2r35
+X 9 a-textio.ads
+48K13*Text_IO 506e16 12|1w10 1r27 13|1w10 1r27
+51P9*File_Type(369R9) 12|7r40 9r34 13|7r40 43r34
+183V13*End_Of_File{boolean} 13|10r87 13r17 16r20 45r89 48r20
+205U14*Get 13|11r10 19r32 46r11
+208U14*Put 13|37r10 40r7
+242U14*Put 13|28r28
+297X4*End_Error 13|28r15
+X 12 d_paraula.ads
+3K9*d_Paraula 25l5 25e14 13|3b14 62l5 62t14
+5R9*Paraula 7r25 8r24 11r27 12r29 18c9 21e14 13|7r25 32r24 51r29 56r27
+7U14*Get 7<18 7>34 13|7b14 29l8 29t11
+7r18 P{5R9} 13|7b18 9m7 15r13 17m10 17r15 18m10 18r16 22r16 23m9
+7p34 F{9|51P9} 13|7b34 10r99 11r14 13r29 16r32 19r36
+8U14*Put 8>18 13|32b14 41l8 41t11
+8r18 P{5R9} 13|32b18 36r18 37r14
+9V13*quedenParaules{boolean} 9>28 13|43b13 49l8 49t22
+9p28 F{9|51P9} 13|43b28 45r101 46r15 48r32
+11V13*charPos{character} 11>21 11>36 13|56b13 59l8 59t15
+11r21 P{5R9} 13|56b21 58r14
+11i36 Pos{integer} 13|56b36 58r20
+12V13*llargaria{integer} 12>23 13|51b13 54l8 54t17
+12r23 P{5R9} 13|51b23 53r14
+15i4 MAX{integer} 16r32 13|22r23
+16A9 v_Paraula(character)<integer> 19r12
+19a7*v_p{16A9} 13|18m12 23m11 37m16 58m16
+20i7*n{integer} 13|9m9 15r15 17m12 17r17 18r18 22r18 36r20 53r16
+23X4 Paraula_Llarga 13|15r33
+X 13 d_paraula.adb
+4e4 c{character} 10r17 10r30 10r43 10r56 10r69 11m16 14r13 14r26 14r39 14r52
+. 14r65 18r24 19m38 45r19 45r32 45r45 45r58 45r71 46m17
+5b4 fi_linia{boolean} 13m7 14r82 16m10 19r17
+22i11 i{integer} 23r15
+33i7 i{integer} 36r13 37r20 38m10 38r15
+
