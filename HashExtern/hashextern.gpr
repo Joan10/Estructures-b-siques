@@ -1,0 +1,10 @@
+project HashExtern is
+
+   for Object_Dir use "O";
+
+   package Naming is
+      for Casing use "MixedCase";
+   end Naming;
+
+end HashExtern;
+
