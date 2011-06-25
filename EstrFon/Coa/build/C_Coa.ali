@@ -1,0 +1,93 @@
+V "GNAT Lib v4.4"
+A -gnat95
+A -gnatA
+P SS ZX
+R nnnnnnnvnnnnnnnnnnvnnnvnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnvnvnnnnnnnnnnnnnnnn
+
+U c_coa%b		C_Coa.adb		f104aab7 OO PK
+W ada%s			ada.ads			ada.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W interfaces%s		interfac.ads		interfac.ali
+
+U c_coa%s		C_Coa.ads		f9b1e922 EE OO PK
+W ada.tags%s		a-tags.adb		a-tags.ali
+W system%s		system.ads		system.ali
+W system.exception_table%s  s-exctab.adb	s-exctab.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+
+D ada.ads		20070406091342 9c7dd3ea
+D a-except.ads		20090409232307 b54b55de
+D a-finali.ads		20090409232307 9eaacebd
+D a-filico.ads		20090409232307 9299732a
+D a-inteio.ads		20070406091342 03bc737c
+D a-ioexce.ads		20070406091342 be0900a0
+D a-stream.ads		20090409232307 34aca5be
+D a-tags.ads		20090409232307 bfa07446
+D a-textio.ads		20090409232307 fe8af46e
+D a-tiinio.ads		20090409232307 949a7272
+D a-unccon.ads		20070406091342 51e09df2
+D C_Coa.ads		20110301171325 f9b1e922
+D C_Coa.adb		20110301173246 f583c487
+D interfac.ads		20090409232307 a69cad5c
+D i-cstrea.ads		20090409232307 e1e064a9
+D system.ads		20100911234204 15e10948
+D s-crtl.ads		20090409232307 997234a1
+D s-exctab.ads		20090409232307 5c1c61ae
+D s-ficobl.ads		20090409232307 8bb681e5
+D s-finimp.ads		20090409232307 9449f4cb
+D s-finroo.ads		20090409232307 1408f9d1
+D s-parame.ads		20090409232307 f32e56e9
+D s-secsta.ads		20090409232307 7bae3621
+D s-soflin.ads		20090409232307 0c6fd39d
+D s-stache.ads		20090409232307 257b3be8
+D s-stalib.ads		20090409232307 52b793d5
+D s-stoele.ads		20090409232307 ed966df3
+D s-stoele.adb		20090409232307 e9998c78
+D s-stratt.ads		20090409232307 fef7c1da
+D s-traent.ads		20090409232307 bd5f2753
+D s-unstyp.ads		20090409232307 c0f9fae5
+D s-wchcon.ads		20090409232307 ab028799
+X 1 ada.ads
+16K9*Ada 19e8 13|17r6 17r23 18r6 18r31
+X 5 a-inteio.ads
+18K13*Integer_Text_IO[10|45] 13|18w10 18r35
+X 9 a-textio.ads
+48K13*Text_IO 506e16 13|17w10 17r27
+X 10 a-tiinio.ads
+65U14*Put 13|34r9[5|18]
+X 12 C_Coa.ads
+17K9*C_Coa 40l5 40e10 13|19b14 87l5 87t10
+19R10*Coa 21r30 22r31 23r40 24r30 25r28 35c14 38e23 13|32r30 43r31 56r40
+. 65r30 72r28
+21U15*cBuida 21<23 13|32b15 41l9 41t15
+21r23 c{19R10} 13|32b23 34r21 35r21 35r43 36r15 37r21 39m9 39m17
+22U15*Posa 22=21 22>36 13|43b15 54l9 54t13
+22r21 c{19R10} 13|43b21 51r12 51m25 51m35 52r16 52m29
+22e36 x{character} 13|43b36 49r19
+23U15*EliminaPrimer 23=30 13|56b15 63l9 63t22
+23r30 c{19R10} 13|56b30 59r12 60r14 60m19 60r26 61r12 61m25
+24V14*SelPrimer{character} 24>24 13|65b14 70l9 70t18
+24r24 C{19R10} 13|65b24 68r12 69r18
+25V14*esBuida{boolean} 25>22 13|72b14 76l9 76t16
+25r22 c{19R10} 13|72b22 75r16
+27X5*Mal_Us 13|59r31 68r31
+28X5*Desbordament 13|46r34
+31i9 MAX{integer} 33r46 13|35r50 83r22 86r17
+33I14 index<integer> 37r20 13|24r12 27r27 27r42 30r13 44r12 57r12 84r15 84r30
+. 86r11
+37i15*p{33I14} 13|34r23 35r23 35r45 36r17 39m11 51r14 51m37 52r18 52m31 61m27
+37i17*q{33I14} 13|37r23 39m19 51m27 59r14 60r16 60m21 60r28 61r14 68r14 69r20
+. 75r18
+X 13 C_Coa.adb
+21R10 bloc 25e15 27r57
+23e9*x{character} 49m14 69r23
+24i9*s{12|33I14} 36m20 48r38 49m27 52m21 60r31 62m14 84m25 86m23
+27A10 memoria(21R10)<12|33I14> 29r8
+29a5 m{27A10} 36m13 48r28 49m9 49m22 52m14 60r24 62m9 69r16 84m13 86m9
+30i5 lliure{12|33I14} 36r25 37m13 46r12 48r12 48m20 48r30 62r19 62m27 81m9
+44i9 r{12|33I14} 48m9 49r11 49r24 51r32 51r40 52r26 52r35
+57i9 r{12|33I14} 60m9 62r11 62r37
+83i13 i{integer} 84r21 84r36
+
