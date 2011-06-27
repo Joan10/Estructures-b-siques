@@ -9,11 +9,13 @@ package HashExtern is
 
    space_overflow:exception;
    already_exists:exception;
+   doesnot_exists:exception;
 
    procedure empty(s:out set);
    procedure put(s: in out set; k: in key; x:in item);
+   procedure get(s: in set; k : in key; x: out item);
    --function is_in (s: in set; x: in elem) return boolean;
-   procedure remove (s: in out set; k: in key; x: in item);
+   --procedure remove (s: in out set; k: in key; x: in item);
    --function is_empty (s: in set) return boolean;
 
 private

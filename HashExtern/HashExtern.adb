@@ -4,6 +4,27 @@ package body HashExtern is
       s := (null,0);
    end empty;
 
+   procedure extend (root: in pnode; dg : in out natural) is
+      td: t_disp renames root.td;
+      s: natural;
+   begin
+      s:=2**dg;
+      for i in 0..s-1 loop td(s+i) := td(i); end loop;
+      dg := dg+1;
+   end extend;
+
+   procedure insert_disp
+     (root,p: in pnode; dg: in natural; hp: in natural) is
+      s,hps,nr: natural;
+   begin
+      s:=2**dg; hps:=hp mod s; nr:=2**(dg-p.dl);
+      for i in 1..nr loop
+         root.td(hps) := p; hps:=hps+s;
+      end loop;
+   end insert_disp;
+
+
+
    function get_data_page (root: in pnode; dg: in natural; hi: in natural) return pnode is
       hd:natural;
       p: pnode;
@@ -106,4 +127,66 @@ package body HashExtern is
       end if;
 
    end put;
+
+
+   procedure search
+     (p: in pnode; k:in key; found: out boolean; i:out natural) is
+      ne:natural renames p.ne;
+      te:t_elements renames p.te;
+
+   begin
+      i := 0;
+      found := false;
+      while i<ne and not found loop
+         i := i+1;
+         if te(i).k = k then found := true; end if;
+      end loop;
+   end search;
+
+   procedure get_data(p: in pnode; i: natural; x: out item) is
+      ne:natural renames p.ne;
+      te: t_elements renames p.te;
+   begin
+      x:=te(i).x;
+   end get_data;
+
+   procedure remove_data(p:in pnode; i: in natural) is
+      ne:natural renames p.ne;
+      te: t_elements renames p.te;
+   begin
+      te(i):=te(ne); ne:=ne-1;
+   end remove_data;
+
+   procedure normal_get(root: pnode; dg:in natural; k: in key; x:out item) is
+      p: pnode;
+      hi,i:natural;
+      found:boolean;
+   begin
+      hi:=hash(k);
+      p:=get_data_page(root,dg,hi);
+      search(p,k,found,i);
+      if not found then raise doesnot_exists; end if;
+      get_data(p,i,x);
+   end normal_get;
+
+   procedure get(s: in set; k : in key; x: out item) is
+
+      root: pnode renames s.root;
+      dg: natural renames s.dg;
+      found: boolean;
+      i: natural;
+   begin
+      if root = null then
+         raise doesnot_exists;
+      elsif root.t=data_node then
+         search(root,k,found,i);
+         if not found then raise doesnot_exists; end if;
+         get_data(root,i,x);
+      else
+         normal_get(root,dg,k,x);
+      end if;
+   end get;
+
+
+
 end HashExtern;
