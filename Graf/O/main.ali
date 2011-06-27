@@ -1,0 +1,99 @@
+V "GNAT Lib v4.4"
+M P W=b
+A -gnatA
+P SS ZX
+R nnnvnnnnnnnnnnnvnnvnnnvvnnvnvnnnnnvnnnnnnvnnnnnnnnnnnnnvnnvnnnnnnnnnnnnnnnnnn
+
+U main%b		main.adb		f82abac3 NE OO SU IL
+W ada%s			ada.ads			ada.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W ada.text_io.integer_aux%s  a-tiinau.adb	a-tiinau.ali
+W d_graf%s		d_graf.adb		d_graf.ali
+W interfaces%s		interfac.ads		interfac.ali
+W system%s		system.ads		system.ali
+W system.exception_table%s  s-exctab.adb	s-exctab.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+
+D ada.ads		20070406091342 9c7dd3ea
+D a-except.ads		20090409232307 b54b55de
+D a-finali.ads		20090409232307 9eaacebd
+D a-filico.ads		20090409232307 9299732a
+D a-inteio.ads		20070406091342 03bc737c
+D a-ioexce.ads		20070406091342 be0900a0
+D a-stream.ads		20090409232307 34aca5be
+D a-tags.ads		20090409232307 bfa07446
+D a-textio.ads		20090409232307 fe8af46e
+D a-tiinau.ads		20090409232307 2625f681
+D a-tiinio.ads		20090409232307 949a7272
+D a-tiinio.adb		20090409232307 cf5588a9
+D a-unccon.ads		20070406091342 51e09df2
+D d_graf.ads		20110627170818 b526e9a2
+D d_graf.adb		20110627171215 85625e6d
+D interfac.ads		20090409232307 a69cad5c
+D i-cstrea.ads		20090409232307 e1e064a9
+D main.adb		20110627170757 b03ad473
+D system.ads		20110401034433 15e10948
+D s-crtl.ads		20090409232307 997234a1
+D s-exctab.ads		20090409232307 5c1c61ae
+D s-ficobl.ads		20090409232307 8bb681e5
+D s-finimp.ads		20090409232307 9449f4cb
+D s-finroo.ads		20090409232307 1408f9d1
+D s-parame.ads		20090409232307 f32e56e9
+D s-secsta.ads		20090409232307 7bae3621
+D s-soflin.ads		20090409232307 0c6fd39d
+D s-stache.ads		20090409232307 257b3be8
+D s-stalib.ads		20090409232307 52b793d5
+D s-stoele.ads		20090409232307 ed966df3
+D s-stoele.adb		20090409232307 e9998c78
+D s-stratt.ads		20090409232307 fef7c1da
+D s-traent.ads		20090409232307 bd5f2753
+D s-unstyp.ads		20090409232307 c0f9fae5
+D s-wchcon.ads		20090409232307 ab028799
+X 1 ada.ads
+16K9*Ada 19e8 18|1r14 1r35 2r5 10r24 43r4
+X 5 a-inteio.ads
+18K13*Integer_Text_IO[11|45] 18|1w18 2r9
+X 9 a-textio.ads
+48K13*Text_IO 506e16 18|1w39 10r28 43r8
+166U14*New_Line 18|43r16
+X 11 a-tiinio.ads
+45k21*Integer_IO 84e27 18|10r36
+65U14 Put 18|40r12[10] 50r9[10]
+X 14 d_graf.ads
+4k9*d_graf 50e11 18|1w6 8r22
+5I9 vertex<integer> 18|10r48[8] 15r7[8]
+6A9 graf(35P9[18|8]) 18|13r9[8]
+7R9 iterador 18|14r10[8]
+9A9 dv_cami(5I9[18|8])<integer>
+10R9 cami 18|17r7[8]
+11a7 v_cami{9A9[18|8]} 18|50m15[8]
+12i7 n{integer} 18|49r18[8]
+15U14 gBuit 18|19r7[8]
+16U14 posaAresta 18|22r7[8] 24r8[8] 25r7[8] 26r7[8] 29r7[8] 30r7[8] 32r7[8]
+. 33r7[8]
+19U14 primer 18|20r7[8] 36r7[8]
+20U14 seguent 18|41r10[8]
+21V13 valid{boolean} 18|38r13[8]
+22U14 getVertex 18|39r10[8]
+23U14 cami_mes_llarg 18|45r7[8]
+23a30 g{6A9[18|8]} 18|45r22[8]
+23i42 v0{5I9[18|8]} 18|46r22[8]
+23r57 cf{10R9[18|8]} 18|47r22[8]
+34R9 cell
+35P9 pcell(34R9[18|8])
+X 18 main.adb
+4U11*main 4b11 54l5 54t9
+8K12 dg[14|4] 9r8 13r6 14r7 19r4 20r4 22r4 24r5 25r4 26r4 29r4 30r4 32r4
+. 33r4 36r4 38r10 39r7 41r7 45r4
+10K12 I_IO[11|45] 11r8 40r7 50r4
+13a4 g{14|6A9[8]} 19m13 20r14 22m18 24m19 25m18 26m18 29m18 30m18 32m18 33m18
+. 36r14 45r28
+14r4 it{14|7R9[8]} 20m18 36m18 38r19 39r20 41m18
+15i4 v{14|5I9[8]} 39m23 40r16
+17r4 c{14|10R9[8]} 47m28 49r16 50r13
+49i8 y{integer} 50r22
+
