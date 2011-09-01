@@ -40,6 +40,8 @@
 		<Unit filename="forma.cpp" />
 		<Unit filename="forma.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="taulell.cpp" />
+		<Unit filename="taulell.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

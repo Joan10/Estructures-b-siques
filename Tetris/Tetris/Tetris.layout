@@ -4,7 +4,16 @@
 	<File name="forma.cpp" open="1" top="0" tabpos="1">
 		<Cursor position="0" topLine="0" />
 	</File>
+	<File name="forma.h" open="1" top="0" tabpos="3">
+		<Cursor position="234" topLine="0" />
+	</File>
 	<File name="main.cpp" open="1" top="0" tabpos="2">
-		<Cursor position="57" topLine="0" />
+		<Cursor position="524" topLine="0" />
+	</File>
+	<File name="taulell.cpp" open="1" top="0" tabpos="5">
+		<Cursor position="128" topLine="0" />
+	</File>
+	<File name="taulell.h" open="1" top="1" tabpos="4">
+		<Cursor position="105" topLine="0" />
 	</File>
 </CodeBlocks_layout_file>

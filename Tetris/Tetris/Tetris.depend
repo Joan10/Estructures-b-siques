@@ -11,3 +11,15 @@
 	<iostream>
 	<stdio.h>
 
+1314888999 source:/home/usuari/Escriptori/EstrBasiques/Tetris/Tetris/forma.cpp
+	<stdlib.h>
+	<algorithm>
+	"forma.h"
+
+1314888999 /home/usuari/Escriptori/EstrBasiques/Tetris/Tetris/forma.h
+
+1314888999 source:/home/usuari/Escriptori/EstrBasiques/Tetris/Tetris/main.cpp
+	"forma.h"
+	<iostream>
+	<stdio.h>
+
