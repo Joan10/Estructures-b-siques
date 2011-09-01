@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1314881932 source:/home/joan/Escriptori/Tetris/Tetris/forma.cpp
+	<stdlib.h>
+	<algorithm>
+	"forma.h"
+
+1314880387 /home/joan/Escriptori/Tetris/Tetris/forma.h
+
+1314881777 source:/home/joan/Escriptori/Tetris/Tetris/main.cpp
+	"forma.h"
+	<iostream>
+	<stdio.h>
+
