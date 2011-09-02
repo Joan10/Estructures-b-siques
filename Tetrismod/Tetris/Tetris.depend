@@ -1,0 +1,49 @@
+# depslib dependency file v1.0
+1314881932 source:/home/joan/Escriptori/Tetris/Tetris/forma.cpp
+	<stdlib.h>
+	<algorithm>
+	"forma.h"
+
+1314880387 /home/joan/Escriptori/Tetris/Tetris/forma.h
+
+1314881777 source:/home/joan/Escriptori/Tetris/Tetris/main.cpp
+	"forma.h"
+	<iostream>
+	<stdio.h>
+
+1314888999 source:/home/usuari/Escriptori/EstrBasiques/Tetris/Tetris/forma.cpp
+	<stdlib.h>
+	<algorithm>
+	"forma.h"
+
+1314888999 /home/usuari/Escriptori/EstrBasiques/Tetris/Tetris/forma.h
+
+1314888999 source:/home/usuari/Escriptori/EstrBasiques/Tetris/Tetris/main.cpp
+	"forma.h"
+	<iostream>
+	<stdio.h>
+
+1314888999 source:/home/usuari/Escriptori/EstrBasiques/Tetris (còpia)/Tetris/forma.cpp
+	<stdlib.h>
+	<algorithm>
+	"forma.h"
+
+1314888999 /home/usuari/Escriptori/EstrBasiques/Tetris (còpia)/Tetris/forma.h
+
+1314888999 source:/home/usuari/Escriptori/EstrBasiques/Tetris (còpia)/Tetris/main.cpp
+	"forma.h"
+	<iostream>
+	<stdio.h>
+
+1314888999 source:/home/usuari/Escriptori/EstrBasiques/Tetrismod/Tetris/main.cpp
+	"forma.h"
+	<iostream>
+	<stdio.h>
+
+1314979927 source:/home/usuari/Escriptori/EstrBasiques/Tetrismod/Tetris/objecte.cpp
+	<stdlib.h>
+	<algorithm>
+	"objecte.h"
+
+1314979956 /home/usuari/Escriptori/EstrBasiques/Tetrismod/Tetris/objecte.h
+
