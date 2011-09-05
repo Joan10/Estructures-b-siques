@@ -1,26 +1,44 @@
-#include "forma.h"
+#include "objecte.h"
+#include "taulell.h"
+#include "mwin.h"
+#include "main.h"
+
+#include <wx/wx.h>
 #include <iostream>
 #include <stdio.h>
 
-using namespace std;
 
-int main()
+#define RES_X 480
+#define RES_Y 480
+IMPLEMENT_APP(MyApp)
+
+bool MyApp::OnInit()
 {
-    Forma F1;
 
-    F1.CreaFormaAleatoria();
+    Mwin *Joc = new Mwin(wxT("Joc"), RES_X, RES_Y);
+    Joc->Centre();
+    Joc->Show(true);
 
-    printf("%i %i %i %i \n",F1.x(0),F1.x(1),F1.x(2),F1.x(3));
-    printf("%i %i %i %i \n",F1.y(0),F1.y(1),F1.y(2),F1.y(3));
-    printf("%i",F1.TreuForma());
+    return true;
 
-    Forma F2;
+//    Objecte O1(4); Objecte O2(4);
+//    O1.assignaForma(FormaL); O2.assignaForma(FormaQuadre);
+//    int i = O1.it_primer();
+//
+//    if (T.esPotMoure(O1, 5, 5)) {
+//        T.Posa(&O1, 5, 5);
+//
+//        printf("O1 \n");
+//        while (O1.it_valid(i)) {
+//            printf("%i %i \n", O1.Posx(i), O1.Posy(i));
+//            i = O1.it_seg(i);
+//        }
+//
+//    }else{
+//        printf("res");
+//    }
+//
+//    if (!T.esPotMoure(O2, 8, 8)) printf("no es pot moure");
 
-    F2.CreaFormaAleatoria();
 
-    printf("%i %i %i %i \n",F2.x(0),F2.x(1),F2.x(2),F2.x(3));
-    printf("%i %i %i %i \n",F2.y(0),F2.y(1),F2.y(2),F2.y(3));
-    printf("%i",F2.TreuForma());
-
-    return 0;
 }

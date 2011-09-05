@@ -27,7 +27,7 @@ void Objecte::assignaForma(T_Formes dibuix) {
     }
 
     this->P_Forma = dibuix;
-    this->posAct ={0,0};
+    this->posAct[0] = 0; this->posAct[1] = 0;
 }
 
 void Objecte::assignaFormaAleatoria() {
@@ -86,9 +86,8 @@ void Objecte::RotaEsq(){
     if (!this->P_Forma == FormaQuadre) {
 
         for (int i = 0; i<4; i++){
-            this->coords[i][0] = this->y(i);
-            this->coords[i][1] = -1*this->x(i);
-
+            this->coords[i][0] = this->coords[i][1];
+            this->coords[i][1] = -1*this->coords[i][0];
         }
     }
 }
@@ -98,8 +97,8 @@ void Objecte::RotaDret(){
     if (!this->P_Forma == FormaQuadre) {
 
         for (int i = 0; i<4; i++){
-            this->coords[i][0] = -1*this->y(i);
-            this->coords[i][1] = this->x(i);
+            this->coords[i][0] = -1*this->coords[i][1];
+            this->coords[i][1] = this->coords[i][0];
 
         }
     }
@@ -107,20 +106,26 @@ void Objecte::RotaDret(){
 
 void Objecte::Mou(int x, int y){
 
-    this->posAct = {x,y};
+    this->posAct[0] = x; this->posAct[1] = y;
 
 }
 
-bool Objecte::esA(int x, int y){
+void Objecte::Pinta(wxPaintDC &dc, int mida_quadre) {
 
-    int posx; int posy;
+    int x; int y;
 
-    for (int i = 0; i < 4; i++) {
-        posx = posAct[0] + this->x(i);
-        posy = posAct[1] + this->y(i);
-        if (posx == x && posy == y) return true;
+    wxPen pen( wxColour(0, 0, 0));
+    pen.SetCap(wxCAP_PROJECTING);
+    dc.SetPen(pen);
+    dc.SetBrush(wxColour(121, 252, 121));
+
+    for (int i = 0; i<4; i++){
+        x = (this->coords[i][0]+this->posAct[0])*mida_quadre;
+        y = (this->coords[i][1]+this->posAct[1])*mida_quadre;
+
+        dc.DrawRectangle(x+1, y+1, mida_quadre-1, mida_quadre-1);
+
     }
 
-    return false;
-}
 
+}

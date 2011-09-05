@@ -37,9 +37,12 @@
 		<Linker>
 			<Add option="`wx-config --libs`" />
 		</Linker>
-		<Unit filename="forma.cpp" />
-		<Unit filename="forma.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="main.h" />
+		<Unit filename="mwin.cpp" />
+		<Unit filename="mwin.h" />
+		<Unit filename="objecte.cpp" />
+		<Unit filename="objecte.h" />
 		<Unit filename="taulell.cpp" />
 		<Unit filename="taulell.h" />
 		<Extensions>
