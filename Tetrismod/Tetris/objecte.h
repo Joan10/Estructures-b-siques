@@ -1,7 +1,10 @@
 #ifndef SHAPE_H
 #define SHAPE_H
 #include <wx/wx.h>
-#define MAX_QUADRES 4
+#define MAX_QUADRES 20
+
+#include <stdarg.h>
+
 
 enum T_Formes { FormaBuida, FormaZ, FormaS, FormaLinia, FormaT, FormaQuadre, FormaL, FormaLreves };
 
@@ -9,9 +12,13 @@ class Objecte {
 
 public:
 
-    Objecte(int n){ NUM_QUADRES = n; assignaForma (FormaBuida); } // Constructor
+    Objecte(int data, ...); // Constructor
     void assignaForma (T_Formes dibuix);
     void assignaFormaAleatoria ();
+
+    friend class Taulell;
+
+protected: //per mantenir la integritat de les dades cal que només la classe Taulell pugui accedir a aquests procediments
 
     void assignaId ( int n) { id = n; }
     int treuId () { return id;}
@@ -36,10 +43,11 @@ public:
     void RotaEsq() ;
     void RotaDret() ;
 
-    void Mou(int x, int y);
     void Pinta(wxPaintDC &dc, int mida_quadre);
 
 private:
+
+    void Mou(int x, int y);
 
     int NUM_QUADRES;
     int MIDA_QUADRES;

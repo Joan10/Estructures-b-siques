@@ -4,6 +4,46 @@
 
 using namespace std;
 
+Objecte::Objecte(int data, ...) {
+
+    try {
+
+        assignaForma (FormaBuida);
+
+        va_list ap;
+        va_start(ap, data);
+
+        int d = data;
+        int i = 0; //Conmuta entre coordenada x i coordenada y
+        int j = 0; //Conmuta entre quadradets
+
+        int numArgs = 0;
+        while (d != -666){
+            printf("%i %i  %i \n", i, j, d);
+            this->coords[j][i] = d;
+
+            if (i == 1) j++;
+            i = (i+1) % 2;
+            d = va_arg(ap, int);
+            numArgs++;
+        }
+
+
+        if (numArgs % 2 == 1) throw 1;
+        NUM_QUADRES = numArgs/2;
+
+        va_end(ap); /* You ALWAYS have to "close" the arguments list. */
+
+        this->posAct[0] = 0; this->posAct[1] = 0;
+
+
+    }catch (int e){
+
+        printf("Número de coordenades incorrecte \n");
+
+    }
+}
+
 void Objecte::assignaForma(T_Formes dibuix) {
 
     static const int coordsTaula[8][4][2] = {
@@ -23,7 +63,6 @@ void Objecte::assignaForma(T_Formes dibuix) {
             this->coords[i][j] = coordsTaula[dibuix][i][j];
 
         }
-
     }
 
     this->P_Forma = dibuix;
@@ -40,7 +79,7 @@ void Objecte::assignaFormaAleatoria() {
 int Objecte::MaxX() const {
 
     int m = coords[0][0];
-    for (int i = 1; i<4; i++) {
+    for (int i = 1; i<NUM_QUADRES; i++) {
         if (m<coords[i][0]) m = coords[i][0];
 
     }
@@ -51,7 +90,7 @@ int Objecte::MaxX() const {
 int Objecte::MinX() const {
 
     int m = coords[0][0];
-    for (int i = 1; i<4; i++) {
+    for (int i = 1; i<NUM_QUADRES; i++) {
         if (m>coords[i][0]) m = coords[i][0];
 
     }
@@ -62,7 +101,7 @@ int Objecte::MinX() const {
 int Objecte::MaxY() const {
 
     int m = coords[0][0];
-    for (int i = 1; i<4; i++) {
+    for (int i = 1; i<NUM_QUADRES; i++) {
         if (m<coords[i][1]) m = coords[i][1];
 
     }
@@ -73,7 +112,7 @@ int Objecte::MaxY() const {
 int Objecte::MinY() const {
 
     int m = coords[0][0];
-    for (int i = 1; i<4; i++) {
+    for (int i = 1; i<NUM_QUADRES; i++) {
         if (m>coords[i][1]) m = coords[i][1];
 
     }
@@ -85,7 +124,7 @@ void Objecte::RotaEsq(){
 
     if (!this->P_Forma == FormaQuadre) {
 
-        for (int i = 0; i<4; i++){
+        for (int i = 0; i<NUM_QUADRES; i++){
             this->coords[i][0] = this->coords[i][1];
             this->coords[i][1] = -1*this->coords[i][0];
         }
@@ -96,7 +135,7 @@ void Objecte::RotaDret(){
 
     if (!this->P_Forma == FormaQuadre) {
 
-        for (int i = 0; i<4; i++){
+        for (int i = 0; i<NUM_QUADRES; i++){
             this->coords[i][0] = -1*this->coords[i][1];
             this->coords[i][1] = this->coords[i][0];
 
@@ -119,7 +158,7 @@ void Objecte::Pinta(wxPaintDC &dc, int mida_quadre) {
     dc.SetPen(pen);
     dc.SetBrush(wxColour(121, 252, 121));
 
-    for (int i = 0; i<4; i++){
+    for (int i = 0; i<NUM_QUADRES; i++){
         x = (this->coords[i][0]+this->posAct[0])*mida_quadre;
         y = (this->coords[i][1]+this->posAct[1])*mida_quadre;
 

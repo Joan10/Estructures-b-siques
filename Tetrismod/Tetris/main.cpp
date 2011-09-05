@@ -8,8 +8,8 @@
 #include <stdio.h>
 
 
-#define RES_X 480
-#define RES_Y 480
+#define RES_X 800
+#define RES_Y 600
 IMPLEMENT_APP(MyApp)
 
 bool MyApp::OnInit()

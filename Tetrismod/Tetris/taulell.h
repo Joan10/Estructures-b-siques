@@ -2,8 +2,8 @@
 #ifndef BOARD_H
 #define BOARD_H
 
-#define MAX_OBJ_X 30
-#define MAX_OBJ_Y 30
+#define MAX_OBJ_X 50
+#define MAX_OBJ_Y 50
 
 #include "objecte.h"
 #include <wx/wx.h>
@@ -28,13 +28,8 @@ private:
     int RES_X;
     int RES_Y;
 
-    void Pinta(wxPaintEvent& event);
-    void enTeclaAvall(wxKeyEvent& event);
-
-    int qpix_amplada; int qpix_alcada;
-
-    int numQuadresX() {return RES_X / qpix_amplada;}
-    int numQuadresY() {return RES_Y / qpix_alcada;}
+    int qpix_amplada;
+    int qpix_alcada;
 
     int numObjectes;
 
@@ -47,6 +42,13 @@ private:
 
     //Un taulell és un vector de x*y posicions(lineal)
     nTaulell v_taulell[MAX_OBJ_X][MAX_OBJ_Y];
+
+    void Pinta(wxPaintEvent& event);
+    void enTeclaAvall(wxKeyEvent& event);
+    void PintaFons(wxPaintDC& dc, int nx, int ny);
+
+    int numQuadresX() {return RES_X / qpix_amplada;}
+    int numQuadresY() {return RES_Y / qpix_alcada;}
 
 };
 

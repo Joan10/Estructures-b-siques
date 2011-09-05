@@ -4,8 +4,10 @@ Taulell::Taulell (wxFrame *parent, int qpix, int res_x, int res_y) : wxPanel(par
 
 //    m_stsbar = parent->GetStatusBar();
 
-    numObjectes = 0;
+try {
+    if (res_x/qpix >= MAX_OBJ_X || res_y/qpix >= MAX_OBJ_Y ) throw 1;
 
+    numObjectes = 0;
 
     for (int i = 0; i < MAX_OBJ_X; i++) {
         for (int j = 0; j < MAX_OBJ_Y; j++) {
@@ -25,31 +27,35 @@ Taulell::Taulell (wxFrame *parent, int qpix, int res_x, int res_y) : wxPanel(par
       //Connect(wxEVT_SIZE, wxSizeEventHandler(Taulell::OnSize));
     Connect(wxEVT_KEY_DOWN, wxKeyEventHandler(Taulell::enTeclaAvall));
    // Connect(wxEVT_TIMER, wxCommandEventHandler(Taulell::enTimer));
+} catch(int e) {
+    printf("Resolució incorrecte! \n ");
 
+}
+
+}
+
+void Taulell::PintaFons(wxPaintDC &dc, int nx, int ny) {
+
+    wxSize size = GetClientSize();
+
+    for (int i = 0; i<= ny; i++) {
+        dc.DrawLine(0, i*this->qpix_alcada, size.GetWidth(), i*this->qpix_alcada);
+    }
+    for (int i = 0; i<= nx; i++) {
+        dc.DrawLine(i*this->qpix_amplada, 0 , i*this->qpix_amplada,size.GetHeight());
+    }
 
 }
 
 void Taulell::Pinta(wxPaintEvent& event) {
 
     wxPaintDC dc(this);
-  // wxPaintDC dc2(this);
 
     wxPen pen(wxColour(0, 0, 0));
     pen.SetCap(wxCAP_PROJECTING);
     dc.SetPen(pen);
 
-    wxSize size = GetClientSize();
-
-   // dc.DrawLine(0, 0, 20, 20);
-
-    for (int i = 0; i<= this->numQuadresY(); i++) {
-        dc.DrawLine(0, i*this->qpix_alcada, size.GetWidth(), i*this->qpix_alcada);
-    }
-    for (int i = 0; i<= this->numQuadresX(); i++) {
-        dc.DrawLine(i*this->qpix_amplada, 0 , i*this->qpix_amplada,size.GetHeight());
-    }
-
-
+    PintaFons(dc, numQuadresX(), numQuadresY() );
 
     for (int i = 0; i < numQuadresX(); i++) {
         for (int j = 0; j < numQuadresY(); j++) {
@@ -80,22 +86,27 @@ void Taulell::TaulellBuit(){
 
 void Taulell::Posa(Objecte *O, int x, int y){
 
-    if (!this->esPotMoure(*O, x, y)) { printf("No es pot moure"); return; }
+    O->assignaId(lastId); //Primer assignam l'identificador per poder reutilitzar el codi de esPotMoure, ja que si l'objecte
+                          //no té ID no podem comparar i per tant no entrar al condicional de colisió de esPotMoure.
+
+    if (!this->esPotMoure(*O, x, y)) { printf("No es pot col·locar"); return; }
 
     int i = O->it_primer();
 
-    O->assignaId(lastId); lastId++;
+    lastId++;
     numObjectes++;
 
     O->Mou(x,y);
-
+   //printf("  %i %i    |", O->PosActx(),O->PosActy());
     //Agafam les coordenades de cada quadre i les sumam a les de la posició on volem col·locar l'objecte per a tenir-lo sobre el taulell
     while (O->it_valid(i)) {
         v_taulell[O->Posx(i)][O->Posy(i)].pO = O;
         v_taulell[O->Posx(i)][O->Posy(i)].actiu = true;
-
+      //  printf("  %i %i    |", O->Posx(i),O->Posy(i));
         i = O->it_seg(i);
     }
+  //  printf("\n");
+    Refresh();
 }
 
 void Taulell::Mou(Objecte *O, int dest_x, int dest_y){
@@ -130,7 +141,9 @@ bool Taulell::esPotMoure (Objecte O, int dest_x, int dest_y){
     while (O.it_valid(it)) {
         x = O.Posx(it)+dest_x-O.PosActx();
         y = O.Posy(it)+dest_y-O.PosActy();
-        printf("%i %i \n", x, y);
+        printf("@@ %i %i %i @@@ %i", x,y, O.treuId(), it);
+        if (this->v_taulell[x][y].actiu == true) printf("cert");
+        printf("\n");
         if ((x >= numQuadresX() || x<0 || y>=numQuadresY()|| y<0) || (this->v_taulell[x][y].actiu == true &&
                                                                    this->v_taulell[x][y].pO->treuId() !=
                                                                    O.treuId())) return false;
