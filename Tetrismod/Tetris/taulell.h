@@ -13,11 +13,14 @@ class Taulell : public wxPanel
 {
 
 public:
-    Taulell(wxFrame *parent, int qpix, int res_x, int res_y); //Frame on es dibuixarà el Taulell
+    Taulell(wxFrame *parent, int qpix, int res_x, int res_y, wxStatusBar *s); //Frame on es dibuixarà el Taulell
 
     void TaulellBuit();
     void Posa(Objecte *O, int x, int y);
     void Mou(Objecte *O, int dest_x, int dest_y);
+
+    int QuadreX(int pix_x); //retorna el quadre corresponent als píxels entrats.
+    int QuadreY(int pix_y); //retorna el quadre corresponent als píxels entrats.
 
     bool esPotMoure (Objecte O, int dest_x, int dest_y);
 
@@ -46,9 +49,13 @@ private:
     void Pinta(wxPaintEvent& event);
     void enTeclaAvall(wxKeyEvent& event);
     void PintaFons(wxPaintDC& dc, int nx, int ny);
+    void EnMoure(wxEVT_MOVE, wxMoveEventHandler(Move::OnMove));
 
     int numQuadresX() {return RES_X / qpix_amplada;}
     int numQuadresY() {return RES_Y / qpix_alcada;}
+
+    wxStatusBar *sb;
+
 
 };
 

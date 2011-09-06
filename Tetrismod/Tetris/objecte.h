@@ -2,9 +2,9 @@
 #define SHAPE_H
 #include <wx/wx.h>
 #define MAX_QUADRES 20
+#include <vector>
 
-#include <stdarg.h>
-
+using namespace std;
 
 enum T_Formes { FormaBuida, FormaZ, FormaS, FormaLinia, FormaT, FormaQuadre, FormaL, FormaLreves };
 
@@ -12,7 +12,7 @@ class Objecte {
 
 public:
 
-    Objecte(int data, ...); // Constructor
+    Objecte(vector<int> data); // Constructor
     void assignaForma (T_Formes dibuix);
     void assignaFormaAleatoria ();
 

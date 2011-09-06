@@ -4,35 +4,30 @@
 
 using namespace std;
 
-Objecte::Objecte(int data, ...) {
+Objecte::Objecte(vector<int> data) {
 
     try {
 
+        int tam = data.size();
+
+        if (tam % 2 == 1) throw 1;
+
         assignaForma (FormaBuida);
 
-        va_list ap;
-        va_start(ap, data);
-
-        int d = data;
         int i = 0; //Conmuta entre coordenada x i coordenada y
         int j = 0; //Conmuta entre quadradets
 
-        int numArgs = 0;
-        while (d != -666){
+        for (int d = 0; d<tam; d++){
+
             printf("%i %i  %i \n", i, j, d);
-            this->coords[j][i] = d;
+            this->coords[j][i] = data.at(d);
 
             if (i == 1) j++;
             i = (i+1) % 2;
-            d = va_arg(ap, int);
-            numArgs++;
+
         }
 
-
-        if (numArgs % 2 == 1) throw 1;
-        NUM_QUADRES = numArgs/2;
-
-        va_end(ap); /* You ALWAYS have to "close" the arguments list. */
+        NUM_QUADRES = tam/2;
 
         this->posAct[0] = 0; this->posAct[1] = 0;
 

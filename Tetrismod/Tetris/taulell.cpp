@@ -1,11 +1,14 @@
 #include "taulell.h"
 
-Taulell::Taulell (wxFrame *parent, int qpix, int res_x, int res_y) : wxPanel(parent, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxBORDER_NONE){
+Taulell::Taulell (wxFrame *parent, int qpix, int res_x, int res_y, wxStatusBar *s) : wxPanel(parent, wxID_ANY, wxDefaultPosition, wxSize(res_x,res_y), wxBORDER_NONE){
 
 //    m_stsbar = parent->GetStatusBar();
 
 try {
+
     if (res_x/qpix >= MAX_OBJ_X || res_y/qpix >= MAX_OBJ_Y ) throw 1;
+
+    this->sb = s;
 
     numObjectes = 0;
 
@@ -26,7 +29,7 @@ try {
     Connect(wxEVT_PAINT, wxPaintEventHandler(Taulell::Pinta));
       //Connect(wxEVT_SIZE, wxSizeEventHandler(Taulell::OnSize));
     Connect(wxEVT_KEY_DOWN, wxKeyEventHandler(Taulell::enTeclaAvall));
-   // Connect(wxEVT_TIMER, wxCommandEventHandler(Taulell::enTimer));
+    Connect(wxEVT_MOVE, wxMoveEventHandler(Taulell::EnMoure));
 } catch(int e) {
     printf("Resolució incorrecte! \n ");
 
@@ -34,15 +37,30 @@ try {
 
 }
 
+void Taulell::EnMoure(wxEVT_MOVE, wxMoveEventHandler(Move::OnMove)){
+
+
+this->sb->SetStatusText(wxT("0"));
+
+}
+
+int Taulell::QuadreX(int pix_x) {
+    return pix_x / this->qpix_amplada;
+}
+
+int Taulell::QuadreY(int pix_y) {
+    return pix_y / this->qpix_alcada;
+}
+
 void Taulell::PintaFons(wxPaintDC &dc, int nx, int ny) {
 
     wxSize size = GetClientSize();
 
     for (int i = 0; i<= ny; i++) {
-        dc.DrawLine(0, i*this->qpix_alcada, size.GetWidth(), i*this->qpix_alcada);
+        dc.DrawLine(0, i*this->qpix_alcada,  nx*qpix_alcada, i*this->qpix_alcada);
     }
     for (int i = 0; i<= nx; i++) {
-        dc.DrawLine(i*this->qpix_amplada, 0 , i*this->qpix_amplada,size.GetHeight());
+        dc.DrawLine(i*this->qpix_amplada, 0 , i*this->qpix_amplada, ny*qpix_alcada);
     }
 
 }
