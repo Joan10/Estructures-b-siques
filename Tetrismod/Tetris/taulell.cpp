@@ -1,12 +1,14 @@
 #include "taulell.h"
+#define QPIX 20
 
-Taulell::Taulell (wxFrame *parent, int qpix, int res_x, int res_y, wxStatusBar *s) : wxPanel(parent, wxID_ANY, wxDefaultPosition, wxSize(res_x,res_y), wxBORDER_NONE){
+Taulell::Taulell (wxFrame *parent, int res_x, int res_y, wxStatusBar *s) : wxPanel(parent, wxID_ANY, wxDefaultPosition, wxSize(res_x,res_y), wxBORDER_NONE){
 
 //    m_stsbar = parent->GetStatusBar();
 
+using namespace std;
 try {
 
-    if (res_x/qpix >= MAX_OBJ_X || res_y/qpix >= MAX_OBJ_Y ) throw 1;
+    if (res_x/QPIX >= MAX_OBJ_X || res_y/QPIX >= MAX_OBJ_Y ) throw 1;
 
     this->sb = s;
 
@@ -21,15 +23,15 @@ try {
     this->RES_X = res_x;
     this->RES_Y = res_y;
 
-    this->qpix_amplada = qpix;
-    this->qpix_alcada = qpix;
+    this->qpix_amplada = QPIX;
+    this->qpix_alcada = QPIX;
 
     this->lastId = 0;
 
     Connect(wxEVT_PAINT, wxPaintEventHandler(Taulell::Pinta));
       //Connect(wxEVT_SIZE, wxSizeEventHandler(Taulell::OnSize));
     Connect(wxEVT_KEY_DOWN, wxKeyEventHandler(Taulell::enTeclaAvall));
-    Connect(wxEVT_MOVE, wxMoveEventHandler(Taulell::EnMoure));
+    Connect(wxEVT_MOTION, wxMouseEventHandler(Taulell::OnMove));
 } catch(int e) {
     printf("Resolució incorrecte! \n ");
 
@@ -37,10 +39,10 @@ try {
 
 }
 
-void Taulell::EnMoure(wxEVT_MOVE, wxMoveEventHandler(Move::OnMove)){
+void Taulell::OnMove(wxMouseEvent & event){
 
-
-this->sb->SetStatusText(wxT("0"));
+    wxPoint p = event.GetPosition();
+    this->sb->SetStatusText(wxString::Format(wxT("x: %d, y: %d"), p.x, p.y ));
 
 }
 
@@ -55,7 +57,7 @@ int Taulell::QuadreY(int pix_y) {
 void Taulell::PintaFons(wxPaintDC &dc, int nx, int ny) {
 
     wxSize size = GetClientSize();
-
+    printf("%i",nx);
     for (int i = 0; i<= ny; i++) {
         dc.DrawLine(0, i*this->qpix_alcada,  nx*qpix_alcada, i*this->qpix_alcada);
     }
@@ -159,7 +161,7 @@ bool Taulell::esPotMoure (Objecte O, int dest_x, int dest_y){
     while (O.it_valid(it)) {
         x = O.Posx(it)+dest_x-O.PosActx();
         y = O.Posy(it)+dest_y-O.PosActy();
-        printf("@@ %i %i %i @@@ %i", x,y, O.treuId(), it);
+       // printf("@@ %i %i %i @@@ %i", x,y, O.treuId(), it);
         if (this->v_taulell[x][y].actiu == true) printf("cert");
         printf("\n");
         if ((x >= numQuadresX() || x<0 || y>=numQuadresY()|| y<0) || (this->v_taulell[x][y].actiu == true &&

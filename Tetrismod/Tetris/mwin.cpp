@@ -18,7 +18,8 @@ Mwin::Mwin(const wxString& title, int res_x, int res_y)
 
     wxSize S = sb->GetClientSize();
 
-    Taulell *T = new Taulell(this, 20, res_x, res_y-S.GetHeight()-10, sb);
+    //Taulell *T = new Taulell(this, res_x, res_y-S.GetHeight()-10, sb);
+    Taulell *T = new Taulell(this, res_x, res_y-S.GetHeight()-10, sb);
 
 
     T->SetFocus();
@@ -53,7 +54,5 @@ Mwin::Mwin(const wxString& title, int res_x, int res_y)
     T->Posa(O1, 1, 1);
     T->Posa(O2, 6, 6);
     //T->Posa(O2, 5, 5);
-
-
 }
 

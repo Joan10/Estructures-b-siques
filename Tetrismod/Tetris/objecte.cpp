@@ -19,7 +19,7 @@ Objecte::Objecte(vector<int> data) {
 
         for (int d = 0; d<tam; d++){
 
-            printf("%i %i  %i \n", i, j, d);
+            //printf("%i %i  %i \n", i, j, d);
             this->coords[j][i] = data.at(d);
 
             if (i == 1) j++;
