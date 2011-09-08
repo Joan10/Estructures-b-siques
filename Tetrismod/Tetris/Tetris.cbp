@@ -41,6 +41,8 @@
 		<Unit filename="main.h" />
 		<Unit filename="mwin.cpp" />
 		<Unit filename="mwin.h" />
+		<Unit filename="o_ai.cpp" />
+		<Unit filename="o_ai.h" />
 		<Unit filename="objecte.cpp" />
 		<Unit filename="objecte.h" />
 		<Unit filename="taulell.cpp" />

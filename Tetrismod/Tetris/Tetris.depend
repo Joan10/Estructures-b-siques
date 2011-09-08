@@ -1547,14 +1547,15 @@
 	<iostream>
 	<stdio.h>
 
-1315302569 /home/joan/Escriptori/Joan10-Estructures-b-siques-4318f4e/Tetrismod/Tetris/objecte.h
+1315472200 /home/joan/Escriptori/Joan10-Estructures-b-siques-4318f4e/Tetrismod/Tetris/objecte.h
 	<wx/wx.h>
 	<vector>
 
-1315308514 /home/joan/Escriptori/Joan10-Estructures-b-siques-4318f4e/Tetrismod/Tetris/taulell.h
+1315473448 /home/joan/Escriptori/Joan10-Estructures-b-siques-4318f4e/Tetrismod/Tetris/taulell.h
 	"objecte.h"
 	<wx/wx.h>
 	<stdio.h>
+	<pthread.h>
 
 1315304154 /home/joan/Escriptori/Joan10-Estructures-b-siques-4318f4e/Tetrismod/Tetris/mwin.h
 	<wx/wx.h>
@@ -1562,18 +1563,31 @@
 1315301502 /home/joan/Escriptori/Joan10-Estructures-b-siques-4318f4e/Tetrismod/Tetris/main.h
 	<wx/wx.h>
 
-1315307461 source:/home/joan/Escriptori/Joan10-Estructures-b-siques-4318f4e/Tetrismod/Tetris/taulell.cpp
+1315474397 source:/home/joan/Escriptori/Joan10-Estructures-b-siques-4318f4e/Tetrismod/Tetris/taulell.cpp
 	"taulell.h"
+	"o_ai.cpp"
 
-1315308276 source:/home/joan/Escriptori/Joan10-Estructures-b-siques-4318f4e/Tetrismod/Tetris/mwin.cpp
+1315473621 source:/home/joan/Escriptori/Joan10-Estructures-b-siques-4318f4e/Tetrismod/Tetris/mwin.cpp
 	"mwin.h"
 	"taulell.h"
 	"objecte.h"
 	<vector>
 	<iostream>
 
-1315302612 source:/home/joan/Escriptori/Joan10-Estructures-b-siques-4318f4e/Tetrismod/Tetris/objecte.cpp
+1315466779 source:/home/joan/Escriptori/Joan10-Estructures-b-siques-4318f4e/Tetrismod/Tetris/objecte.cpp
 	<stdlib.h>
 	<algorithm>
+	"objecte.h"
+
+1315474282 source:/home/joan/Escriptori/Joan10-Estructures-b-siques-4318f4e/Tetrismod/Tetris/o_ai.cpp
+	"taulell.h"
+	"o_ai.h"
+
+1315474454 /home/joan/Escriptori/Joan10-Estructures-b-siques-4318f4e/Tetrismod/Tetris/o_ai.cpp
+	"taulell.h"
+	"o_ai.h"
+
+1315473565 /home/joan/Escriptori/Joan10-Estructures-b-siques-4318f4e/Tetrismod/Tetris/o_ai.h
+	"taulell.h"
 	"objecte.h"
 

@@ -1,4 +1,5 @@
 #include "taulell.h"
+#include "o_ai.cpp"
 #define QPIX 20
 using namespace std;
 
@@ -104,19 +105,13 @@ void Taulell::TaulellBuit(){
     }
 }
 
-void*
-do_loop(void* data)
-{
-    Objecte *O = ((Objecte*)data);
-    printf("id1: %i \n", O->treuId());
-    O->activa();
 
-    /* terminate the thread */
-    pthread_exit(NULL);
-}
 
 
 void Taulell::Posa(Objecte *O, int x, int y){
+
+    dTaulellObjecte buff;
+
 
     O->assignaId(lastId); //Primer assignam l'identificador per poder reutilitzar el codi de esPotMoure, ja que si l'objecte
                           //no té ID no podem comparar i per tant no entrar al condicional de colisió de esPotMoure.
@@ -139,8 +134,12 @@ void Taulell::Posa(Objecte *O, int x, int y){
             i = O->it_seg(i);
         }
       //  printf("\n");
-        printf("id0: %i \n", O->treuId());
-        thr_id = pthread_create(&p_thread, NULL, do_loop, (void*)O);
+
+        buff.pO = O;
+        buff.pT = this;
+
+        printf("id0: %i \n", buff.pO->treuId());
+        thr_id = pthread_create(&p_thread, NULL, do_loop, (void*)&buff );
 
         Refresh();
 

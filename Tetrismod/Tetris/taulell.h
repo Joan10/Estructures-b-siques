@@ -11,6 +11,8 @@
 
 #include <pthread.h>     /* pthread functions and data structures */
 
+
+
 class Taulell : public wxPanel
 {
 
@@ -27,6 +29,8 @@ public:
     bool esPotMoure (Objecte O, int dest_x, int dest_y);
 
     Objecte * ObjecteA (int x, int y);
+
+
 
 private:
 
@@ -62,5 +66,11 @@ private:
     static const int eCoordIncorrectes = 0;
     static const int eCoordIncorrecte = 1;
 };
+
+    struct dTaulellObjecte {
+        Objecte *pO;
+        Taulell *pT;
+    };
+
 
 #endif

@@ -15,10 +15,13 @@ public:
     void assignaForma (T_Formes dibuix);
     void assignaFormaAleatoria ();
 
-    void activa();
+    void CanviaColor(int x, int y, int z);
 
     friend class Taulell;
+
     int treuId () { return id;}
+
+
 protected: //per mantenir la integritat de les dades cal que només la classe Taulell pugui accedir a aquests procediments
 
     void assignaId ( int n) { id = n; }
@@ -45,6 +48,7 @@ protected: //per mantenir la integritat de les dades cal que només la classe Ta
     void RotaDret() ;
 
     void Pinta(wxPaintDC &dc, int mida_quadre);
+
 
 private:
 

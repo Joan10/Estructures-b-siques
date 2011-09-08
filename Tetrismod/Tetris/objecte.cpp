@@ -163,15 +163,6 @@ void Objecte::Pinta(wxPaintDC &dc, int mida_quadre) {
     }
 }
 
-void Objecte::activa() {
-
-printf(" Sóc la figura %i \n", id);
-for (int i = 0; i<255; i= i+20){
-   ActColour->Set(i,i,i);
-
-   printf("%i", i);
-   sleep(1);
-}
-
-   printf(" Adéu! %i \n", id);
+void Objecte::CanviaColor(int x, int y, int z) {
+   ActColour->Set(x,y,z);
 }

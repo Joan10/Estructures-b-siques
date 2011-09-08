@@ -1,28 +1,34 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
-	<File name="main.cpp" open="1" top="0" tabpos="6">
-		<Cursor position="78" topLine="6" />
+	<File name="main.cpp" open="1" top="0" tabpos="5">
+		<Cursor position="78" topLine="0" />
 	</File>
-	<File name="main.h" open="1" top="0" tabpos="5">
-		<Cursor position="0" topLine="0" />
+	<File name="main.h" open="1" top="0" tabpos="4">
+		<Cursor position="90" topLine="0" />
 	</File>
 	<File name="mwin.cpp" open="1" top="0" tabpos="1">
-		<Cursor position="851" topLine="24" />
+		<Cursor position="1211" topLine="4" />
 	</File>
-	<File name="mwin.h" open="1" top="0" tabpos="4">
+	<File name="mwin.h" open="0" top="0" tabpos="4">
 		<Cursor position="85" topLine="0" />
 	</File>
-	<File name="objecte.cpp" open="1" top="1" tabpos="8">
-		<Cursor position="3460" topLine="143" />
+	<File name="o_ai.cpp" open="1" top="1" tabpos="7">
+		<Cursor position="524" topLine="0" />
 	</File>
-	<File name="objecte.h" open="1" top="0" tabpos="7">
-		<Cursor position="996" topLine="0" />
+	<File name="o_ai.h" open="1" top="0" tabpos="8">
+		<Cursor position="50" topLine="0" />
+	</File>
+	<File name="objecte.cpp" open="1" top="0" tabpos="6">
+		<Cursor position="3387" topLine="114" />
+	</File>
+	<File name="objecte.h" open="1" top="0" tabpos="9">
+		<Cursor position="435" topLine="15" />
 	</File>
 	<File name="taulell.cpp" open="1" top="0" tabpos="2">
-		<Cursor position="2537" topLine="87" />
+		<Cursor position="3426" topLine="96" />
 	</File>
 	<File name="taulell.h" open="1" top="0" tabpos="3">
-		<Cursor position="635" topLine="23" />
+		<Cursor position="1447" topLine="16" />
 	</File>
 </CodeBlocks_layout_file>
