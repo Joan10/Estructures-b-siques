@@ -56,22 +56,23 @@
 	<iostream>
 	<stdio.h>
 
-1315318437 source:/home/joan/Escriptori/Estructures-b-siques/Tetrismod/Tetris/objecte.cpp
+1315435416 source:/home/joan/Escriptori/Estructures-b-siques/Tetrismod/Tetris/objecte.cpp
 	<stdlib.h>
 	<algorithm>
 	"objecte.h"
 
-1315318012 /home/joan/Escriptori/Estructures-b-siques/Tetrismod/Tetris/objecte.h
+1315435644 /home/joan/Escriptori/Estructures-b-siques/Tetrismod/Tetris/objecte.h
 	<wx/wx.h>
 	<vector>
 
-1315331566 source:/home/joan/Escriptori/Estructures-b-siques/Tetrismod/Tetris/taulell.cpp
+1315435841 source:/home/joan/Escriptori/Estructures-b-siques/Tetrismod/Tetris/taulell.cpp
 	"taulell.h"
 
-1315331305 /home/joan/Escriptori/Estructures-b-siques/Tetrismod/Tetris/taulell.h
+1315433871 /home/joan/Escriptori/Estructures-b-siques/Tetrismod/Tetris/taulell.h
 	"objecte.h"
 	<wx/wx.h>
 	<stdio.h>
+	<pthread.h>
 
 1302103769 /usr/include/wx-2.8/wx/wx.h
 	"wx/defs.h"
@@ -1530,7 +1531,7 @@
 1315318012 /home/joan/Escriptori/Estructures-b-siques/Tetrismod/Tetris/mwin.h
 	<wx/wx.h>
 
-1315318012 source:/home/joan/Escriptori/Estructures-b-siques/Tetrismod/Tetris/mwin.cpp
+1315427670 source:/home/joan/Escriptori/Estructures-b-siques/Tetrismod/Tetris/mwin.cpp
 	"mwin.h"
 	"taulell.h"
 	"objecte.h"

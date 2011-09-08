@@ -31,6 +31,7 @@ Objecte::Objecte(vector<int> data) {
 
         this->posAct[0] = 0; this->posAct[1] = 0;
 
+        ActColour = new wxColour(121, 252, 121);
 
     }catch (int e){
 
@@ -151,7 +152,7 @@ void Objecte::Pinta(wxPaintDC &dc, int mida_quadre) {
     wxPen pen( wxColour(0, 0, 0));
     pen.SetCap(wxCAP_PROJECTING);
     dc.SetPen(pen);
-    dc.SetBrush(wxColour(121, 252, 121));
+    dc.SetBrush(*ActColour);
 
     for (int i = 0; i<NUM_QUADRES; i++){
         x = (this->coords[i][0]+this->posAct[0])*mida_quadre;
@@ -160,6 +161,17 @@ void Objecte::Pinta(wxPaintDC &dc, int mida_quadre) {
         dc.DrawRectangle(x+1, y+1, mida_quadre-1, mida_quadre-1);
 
     }
+}
 
+void Objecte::activa() {
 
+printf(" Sóc la figura %i \n", id);
+for (int i = 0; i<255; i= i+20){
+   ActColour->Set(i,i,i);
+
+   printf("%i", i);
+   sleep(1);
+}
+
+   printf(" Adéu! %i \n", id);
 }

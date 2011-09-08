@@ -9,6 +9,8 @@
 #include <wx/wx.h>
 #include <stdio.h>
 
+#include <pthread.h>     /* pthread functions and data structures */
+
 class Taulell : public wxPanel
 {
 
@@ -43,6 +45,7 @@ private:
 
     int lastId;
 
+    Objecte *OAct;
     //Un taulell és un vector de x*y posicions(lineal)
     nTaulell v_taulell[MAX_OBJ_X][MAX_OBJ_Y];
 
@@ -56,7 +59,8 @@ private:
 
     wxStatusBar *sb;
 
-
+    static const int eCoordIncorrectes = 0;
+    static const int eCoordIncorrecte = 1;
 };
 
 #endif

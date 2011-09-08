@@ -26,7 +26,7 @@ Mwin::Mwin(const wxString& title, int res_x, int res_y)
     T->TaulellBuit();
 
     vector<int> v1;
-    v1.push_back(-1); v1.push_back(-1); v1.push_back(0); v1.push_back(0);
+    v1.push_back(0); v1.push_back(0);
 
     vector<int> v2;
     v2.push_back(0);
@@ -51,7 +51,7 @@ Mwin::Mwin(const wxString& title, int res_x, int res_y)
 //    Objecte *O4 = new Objecte(4,3,2,5,-1);
 //    O4->assignaForma(FormaT);
 
-    T->Posa(O1, 1, 1);
+    T->Posa(O1, 0 , 0);
     T->Posa(O2, 6, 6);
     //T->Posa(O2, 5, 5);
 }

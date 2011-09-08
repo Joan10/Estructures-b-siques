@@ -2,27 +2,27 @@
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
 	<File name="main.cpp" open="1" top="0" tabpos="6">
-		<Cursor position="78" topLine="0" />
+		<Cursor position="78" topLine="6" />
 	</File>
 	<File name="main.h" open="1" top="0" tabpos="5">
 		<Cursor position="0" topLine="0" />
 	</File>
 	<File name="mwin.cpp" open="1" top="0" tabpos="1">
-		<Cursor position="760" topLine="21" />
+		<Cursor position="851" topLine="24" />
 	</File>
 	<File name="mwin.h" open="1" top="0" tabpos="4">
 		<Cursor position="85" topLine="0" />
 	</File>
-	<File name="objecte.cpp" open="1" top="0" tabpos="8">
-		<Cursor position="535" topLine="27" />
+	<File name="objecte.cpp" open="1" top="1" tabpos="8">
+		<Cursor position="3460" topLine="143" />
 	</File>
 	<File name="objecte.h" open="1" top="0" tabpos="7">
-		<Cursor position="113" topLine="31" />
+		<Cursor position="996" topLine="0" />
 	</File>
-	<File name="taulell.cpp" open="1" top="1" tabpos="2">
-		<Cursor position="550" topLine="3" />
+	<File name="taulell.cpp" open="1" top="0" tabpos="2">
+		<Cursor position="2537" topLine="87" />
 	</File>
 	<File name="taulell.h" open="1" top="0" tabpos="3">
-		<Cursor position="622" topLine="22" />
+		<Cursor position="635" topLine="23" />
 	</File>
 </CodeBlocks_layout_file>

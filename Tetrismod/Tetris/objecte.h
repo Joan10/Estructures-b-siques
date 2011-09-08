@@ -3,7 +3,6 @@
 #include <wx/wx.h>
 #define MAX_QUADRES 20
 #include <vector>
-
 using namespace std;
 
 enum T_Formes { FormaBuida, FormaZ, FormaS, FormaLinia, FormaT, FormaQuadre, FormaL, FormaLreves };
@@ -16,12 +15,14 @@ public:
     void assignaForma (T_Formes dibuix);
     void assignaFormaAleatoria ();
 
-    friend class Taulell;
+    void activa();
 
+    friend class Taulell;
+    int treuId () { return id;}
 protected: //per mantenir la integritat de les dades cal que només la classe Taulell pugui accedir a aquests procediments
 
     void assignaId ( int n) { id = n; }
-    int treuId () { return id;}
+
 
     T_Formes TreuForma() const { return P_Forma; }
 
@@ -58,6 +59,8 @@ private:
     int posAct[2];
 
     int id;
+
+    wxColour *ActColour;
 
 };
 
