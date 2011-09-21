@@ -37,16 +37,33 @@
 		<Linker>
 			<Add option="`wx-config --libs`" />
 		</Linker>
+		<Unit filename="Camara.cpp" />
+		<Unit filename="Camara.h" />
+		<Unit filename="Rutina.cpp" />
+		<Unit filename="Rutina.h" />
+		<Unit filename="behaviors.h" />
+		<Unit filename="include/llista.h">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="include/nodeLlista.h">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="interaccions.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="main.h" />
 		<Unit filename="mwin.cpp" />
 		<Unit filename="mwin.h" />
-		<Unit filename="o_ai.cpp" />
-		<Unit filename="o_ai.h" />
 		<Unit filename="objecte.cpp" />
 		<Unit filename="objecte.h" />
+		<Unit filename="src/llista.cpp">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/nodeLlista.cpp">
+			<Option target="Release" />
+		</Unit>
 		<Unit filename="taulell.cpp" />
 		<Unit filename="taulell.h" />
+		<Unit filename="utils.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

@@ -1,12 +1,5 @@
-#include "objecte.h"
-#include "taulell.h"
-#include "mwin.h"
+
 #include "main.h"
-
-#include <wx/wx.h>
-#include <iostream>
-#include <stdio.h>
-
 
 #define RES_X 800
 #define RES_Y 600

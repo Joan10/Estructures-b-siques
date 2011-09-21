@@ -1,0 +1,119 @@
+
+#include "objecte.h"
+
+using namespace std;
+
+Objecte::Objecte() {
+        ActColour = new wxColour(121, 252, 121);
+
+}
+
+int Objecte::MaxX() const {
+
+    int m = coords[0][0];
+    for (int i = 1; i<NUM_QUADRES; i++) {
+        if (m<coords[i][0]) m = coords[i][0];
+
+    }
+    return m;
+
+}
+
+int Objecte::MinX() const {
+
+    int m = coords[0][0];
+    for (int i = 1; i<NUM_QUADRES; i++) {
+        if (m>coords[i][0]) m = coords[i][0];
+
+    }
+    return m;
+
+}
+
+int Objecte::MaxY() const {
+
+    int m = coords[0][0];
+    for (int i = 1; i<NUM_QUADRES; i++) {
+        if (m<coords[i][1]) m = coords[i][1];
+
+    }
+    return m;
+
+}
+
+int Objecte::MinY() const {
+
+    int m = coords[0][0];
+    for (int i = 1; i<NUM_QUADRES; i++) {
+        if (m>coords[i][1]) m = coords[i][1];
+
+    }
+    return m;
+
+}
+
+void Objecte::RotaEsq(){
+
+    if (!this->P_Forma == FormaQuadre) {
+
+        for (int i = 0; i<NUM_QUADRES; i++){
+            this->coords[i][0] = this->coords[i][1];
+            this->coords[i][1] = -1*this->coords[i][0];
+        }
+    }
+}
+
+void Objecte::RotaDret(){
+
+    if (!this->P_Forma == FormaQuadre) {
+
+        for (int i = 0; i<NUM_QUADRES; i++){
+            this->coords[i][0] = -1*this->coords[i][1];
+            this->coords[i][1] = this->coords[i][0];
+
+        }
+    }
+}
+
+
+void Objecte::Pinta(wxPaintDC &dc, int mida_quadre, int PosActX, int PosActY) {
+
+    int x; int y;
+
+    wxPen pen( wxColour(0, 0, 0));
+    pen.SetCap(wxCAP_PROJECTING);
+    dc.SetPen(pen);
+    dc.SetBrush(*ActColour);
+
+    for (int i = 0; i<NUM_QUADRES; i++){
+        x = (this->coords[i][0]+this->PosActX)*mida_quadre;
+        y = (this->coords[i][1]+this->PosActY)*mida_quadre;
+
+        dc.DrawRectangle(x+1, y+1, mida_quadre-1, mida_quadre-1);
+
+    }
+}
+
+void Objecte::CanviaColor(int x, int y, int z) {
+   ActColour->Set(x,y,z);
+}
+
+
+Objecte1::Objecte1() : Objecte() {
+    this->NUM_QUADRES = 4;
+    this->assignaForma();
+}
+
+void Objecte1::assignaForma{
+
+    static const int coordsTaula[NUM_QUADRES][2] =
+        { { 1, -1 },  { 0, -1 },  { 0, 0 },   { 0, 1 } };
+
+    for (int i = 0; i<NUM_QUADRES; i++) {
+        for (int j = 0; j<2; j++){
+            this->coords[i][j] = coordsTaula[i][j];
+        }
+    }
+
+}
+

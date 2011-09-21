@@ -47,32 +47,27 @@
 
 1314979956 /home/usuari/Escriptori/EstrBasiques/Tetrismod/Tetris/objecte.h
 
-1315233151 source:/home/joan/Escriptori/Estructures-b-siques/Tetrismod/Tetris/main.cpp
-	"objecte.h"
-	"taulell.h"
-	"mwin.h"
+1315940790 source:/home/joan/Escriptori/Estructures-b-siques/Tetrismod/Tetris/main.cpp
 	"main.h"
-	<wx/wx.h>
-	<iostream>
-	<stdio.h>
 
-1315435416 source:/home/joan/Escriptori/Estructures-b-siques/Tetrismod/Tetris/objecte.cpp
-	<stdlib.h>
-	<algorithm>
+1316637434 source:/home/joan/Escriptori/Estructures-b-siques/Tetrismod/Tetris/objecte.cpp
 	"objecte.h"
 
-1315435644 /home/joan/Escriptori/Estructures-b-siques/Tetrismod/Tetris/objecte.h
+1316643269 /home/joan/Escriptori/Estructures-b-siques/Tetrismod/Tetris/objecte.h
 	<wx/wx.h>
 	<vector>
+	<stdlib.h>
+	<algorithm>
 
-1315435841 source:/home/joan/Escriptori/Estructures-b-siques/Tetrismod/Tetris/taulell.cpp
+1316642959 source:/home/joan/Escriptori/Estructures-b-siques/Tetrismod/Tetris/taulell.cpp
 	"taulell.h"
 
-1315433871 /home/joan/Escriptori/Estructures-b-siques/Tetrismod/Tetris/taulell.h
-	"objecte.h"
+1316642309 /home/joan/Escriptori/Estructures-b-siques/Tetrismod/Tetris/taulell.h
 	<wx/wx.h>
 	<stdio.h>
+	"objecte.h"
 	<pthread.h>
+	<typeinfo>
 
 1302103769 /usr/include/wx-2.8/wx/wx.h
 	"wx/defs.h"
@@ -1525,18 +1520,25 @@
 1302103770 /usr/include/wx-2.8/wx/gtk/filedlg.h
 	"wx/generic/filedlgg.h"
 
-1315067039 /home/joan/Escriptori/Estructures-b-siques/Tetrismod/Tetris/main.h
+1315682835 /home/joan/Escriptori/Estructures-b-siques/Tetrismod/Tetris/main.h
 	<wx/wx.h>
-
-1315318012 /home/joan/Escriptori/Estructures-b-siques/Tetrismod/Tetris/mwin.h
-	<wx/wx.h>
-
-1315427670 source:/home/joan/Escriptori/Estructures-b-siques/Tetrismod/Tetris/mwin.cpp
 	"mwin.h"
+	<iostream>
+	<stdio.h>
+
+1316643376 /home/joan/Escriptori/Estructures-b-siques/Tetrismod/Tetris/mwin.h
+	<wx/wx.h>
 	"taulell.h"
-	"objecte.h"
+	"Objectes/Objecte1.h"
 	<vector>
 	<iostream>
+	"Rutina.h"
+
+1316642810 source:/home/joan/Escriptori/Estructures-b-siques/Tetrismod/Tetris/mwin.cpp
+	"mwin.h"
+	"utils.h"
+	"behaviors.h"
+	"interaccions.h"
 
 1315301502 source:/home/joan/Escriptori/Joan10-Estructures-b-siques-4318f4e/Tetrismod/Tetris/main.cpp
 	"objecte.h"
@@ -1590,4 +1592,56 @@
 1315473565 /home/joan/Escriptori/Joan10-Estructures-b-siques-4318f4e/Tetrismod/Tetris/o_ai.h
 	"taulell.h"
 	"objecte.h"
+
+1316108926 source:/home/joan/Escriptori/Estructures-b-siques/Tetrismod/Tetris/o_ai.cpp
+	"o_ai.h"
+
+1316108891 /home/joan/Escriptori/Estructures-b-siques/Tetrismod/Tetris/o_ai.h
+	"taulell.h"
+	"objecte.h"
+
+1316030722 /home/joan/Escriptori/Estructures-b-siques/Tetrismod/Tetris/o_ai.cpp
+	"o_ai.h"
+
+1315682778 /home/joan/Escriptori/Estructures-b-siques/Tetrismod/Tetris/sbrang.cpp
+	<iostream>
+	<stdio.h>
+
+1315681261 /home/joan/Escriptori/Estructures-b-siques/Tetrismod/Tetris/T_ID.cpp
+	"sbrang.cpp"
+
+1315751708 source:/home/joan/Escriptori/Estructures-b-siques/Tetrismod/Tetris/sbrang.cpp
+	"sbrang.h"
+
+1315751723 /home/joan/Escriptori/Estructures-b-siques/Tetrismod/Tetris/sbrang.h
+	<iostream>
+	<stdio.h>
+
+1316642758 source:/home/joan/Escriptori/Estructures-b-siques/Tetrismod/Tetris/Rutina.cpp
+	"Rutina.h"
+	"utils.h"
+	<pthread.h>
+
+1316642411 /home/joan/Escriptori/Estructures-b-siques/Tetrismod/Tetris/Rutina.h
+	"taulell.h"
+	<list>
+
+1316642628 /home/joan/Escriptori/Estructures-b-siques/Tetrismod/Tetris/utils.h
+
+1316642789 /home/joan/Escriptori/Estructures-b-siques/Tetrismod/Tetris/behaviors.h
+
+1316642801 /home/joan/Escriptori/Estructures-b-siques/Tetrismod/Tetris/interaccions.h
+
+1316643082 source:/home/joan/Escriptori/Estructures-b-siques/Tetrismod/Tetris/Camara.cpp
+	"Camara.h"
+
+1316643055 /home/joan/Escriptori/Estructures-b-siques/Tetrismod/Tetris/Camara.h
+	"taulell.h"
+	"objecte.h"
+
+1316643291 source:/home/joan/Escriptori/Estructures-b-siques/Tetrismod/Tetris/Objectes/Objecte1.cpp
+	"Objecte1.h"
+
+1316643305 /home/joan/Escriptori/Estructures-b-siques/Tetrismod/Tetris/Objectes/Objecte1.h
+	"../objecte.h"
 

@@ -5,40 +5,51 @@
 #define MAX_OBJ_X 50
 #define MAX_OBJ_Y 50
 
-#include "objecte.h"
+#define QPIX 20
+
 #include <wx/wx.h>
 #include <stdio.h>
 
+#include "objecte.h"
 #include <pthread.h>     /* pthread functions and data structures */
+#include <typeinfo>
 
+enum sentit{dreta, esquerra};
 
-
-class Taulell : public wxPanel
+class Taulell
 {
 
 public:
-    Taulell(wxFrame *parent, int res_x, int res_y, wxStatusBar *s); //Frame on es dibuixarà el Taulell
-
+    Taulell(int cas_x, int cas_y, wxStatusBar *s); //Frame on es dibuixarà el Taulell
+    ~Taulell();
     void TaulellBuit();
-    void Posa(Objecte *O, int x, int y);
-    void Mou(Objecte *O, int dest_x, int dest_y);
 
-    int QuadreX(int pix_x); //retorna el quadre corresponent als píxels entrats.
-    int QuadreY(int pix_y); //retorna el quadre corresponent als píxels entrats.
+    void Posa(int x, int y, Objecte *O); //Genera un element, el col·loca i retorna una ID.
+    void Mou(Objecte *O, int dest_x, int dest_y);  //Mou l'objecte en funció de la ID
+    void Mou(int x, int y, int dest_x, int dest_y);
+    void Rota(Objecte *O, sentit s);
 
-    bool esPotMoure (Objecte O, int dest_x, int dest_y);
+    void CanviaColor(Objecte *O, int R, int G, int B);
 
-    Objecte * ObjecteA (int x, int y);
+    bool ExisteixObjecte(int x, int y); //Retorna vertader si existeix l'objecte
 
+    Objecte * ObjecteA (int x, int y); //Retorna la ID de l'objecte a tal posició.
 
+    int posX(Objecte *O) { return TaulaEq[0][(O->treuId()-1)]; }
+    int posY(Objecte *O){ return TaulaEq[1][(O->treuId()-1)]; }
+
+    int numQuadresX() {return CAS_X;}
+    int numQuadresY() {return CAS_Y;}
+
+    float Distancia(Objecte *O1,Objecte *O2);
+
+    void Pinta();
+    void Pinta(int x_infesq, int y_infesq, int x_supdret, int y_supdret );
 
 private:
 
-    int RES_X;
-    int RES_Y;
-
-    int qpix_amplada;
-    int qpix_alcada;
+    int CAS_X;
+    int CAS_Y;
 
     int numObjectes;
 
@@ -47,30 +58,37 @@ private:
         bool actiu;
     };
 
-    int lastId;
 
-    Objecte *OAct;
+
+    /********************
+    / Estructura de dades
+    *********************/
+    T_ID lastId; //Darrer identificador entrat
+
+    Objecte *OAct; //Objecte actual seleccionat.
+    T_ID IdAct; // Identificador de l'objecte actual
+
     //Un taulell és un vector de x*y posicions(lineal)
-    nTaulell v_taulell[MAX_OBJ_X][MAX_OBJ_Y];
+    nTaulell v_taulell[MAX_OBJ_X][MAX_OBJ_Y]; //Taulell, matriu.
+    int TaulaEq[2][MAX_OBJ_X*MAX_OBJ_Y]; //Taula indexada per la identificació (desgraciadament s'ha de convertir a int...)
+                                         // que donada una ID ens treu la posició de l'objecte al qual pertany la ID.
 
-    void Pinta(wxPaintEvent& event);
-    void enTeclaAvall(wxKeyEvent& event);
-    void PintaFons(wxPaintDC& dc, int nx, int ny);
-    void OnMove(wxMouseEvent & event);
 
-    int numQuadresX() {return RES_X / qpix_amplada;}
-    int numQuadresY() {return RES_Y / qpix_alcada;}
+    void PosaEf(Objecte *O, int x, int y);
+    void MouEf(Objecte *O, int dest_x, int dest_y);
+
+    bool esPotMoure (Objecte *O, int dest_x, int dest_y);
+    bool PotGirar (Objecte *O, int posActX, int posActY, sentit s);
+
+
+
+
 
     wxStatusBar *sb;
 
-    static const int eCoordIncorrectes = 0;
-    static const int eCoordIncorrecte = 1;
+    enum exceptions{CoordIncorrecte, CoordBuida, ResolucioNoValida, Invalid};
+
+
 };
-
-    struct dTaulellObjecte {
-        Objecte *pO;
-        Taulell *pT;
-    };
-
 
 #endif

@@ -1,9 +1,7 @@
 #include "mwin.h"
-#include "taulell.h"
-#include "objecte.h"
-#include <vector>
-#include <iostream>
-
+#include "utils.h"
+#include "behaviors.h"
+#include "interaccions.h"
 
 using namespace std;
 
@@ -19,40 +17,25 @@ Mwin::Mwin(const wxString& title, int res_x, int res_y)
     wxSize S = sb->GetClientSize();
 
     //Taulell *T = new Taulell(this, res_x, res_y-S.GetHeight()-10, sb);
-    Taulell *T = new Taulell(this, res_x, res_y-S.GetHeight()-10, sb);
+    Taulell *T = new Taulell(20, 20, sb);
 
-
-    T->SetFocus();
     T->TaulellBuit();
 
-    vector<int> v1;
-    v1.push_back(0); v1.push_back(0);
+    Objecte *O1 = new Objecte1();
+    Objecte *O2 = new Objecte1();
 
-    vector<int> v2;
-    v2.push_back(0);
-    v2.push_back(0);
-    v2.push_back(0);
-    v2.push_back(1);
-    v2.push_back(1);
-    v2.push_back(1);
-    v2.push_back(-1);
-    v2.push_back(0);
-    v2.push_back(-2);
-    v2.push_back(0);
+    Objecte *Cam1 = new Camara(this, 5, 5, T);
 
-    Objecte *O1 = new Objecte(v1);
-//
-    Objecte *O2 = new Objecte(v2);
-//    O2->assignaForma(FormaL);
-//
-//    Objecte *O3 = new Objecte(4,3,2,5,-1);
-//    O3->assignaForma(FormaLinia);
-//
-//    Objecte *O4 = new Objecte(4,3,2,5,-1);
-//    O4->assignaForma(FormaT);
+    T->Posa(10,10, O1);
+    T->Posa(15,10, O2);
 
-    T->Posa(O1, 0 , 0);
-    T->Posa(O2, 6, 6);
-    //T->Posa(O2, 5, 5);
+
+    Rutina *R1 = new Rutina(T);
+    R1->CreaInteraccio(O1,O2, Interaccio_01);
+  //  R1->EliminaInteraccio(1,2);
+
 }
+
+
+
 

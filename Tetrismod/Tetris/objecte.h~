@@ -1,33 +1,28 @@
 #ifndef SHAPE_H
 #define SHAPE_H
-#define MAX_QUADRES 20
-#define MAX_OBJ_X 50
-#define MAX_OBJ_Y 50
-
 #include <wx/wx.h>
+#define MAX_QUADRES 20
 #include <vector>
 #include <stdlib.h>
 #include <algorithm>
 
 using namespace std;
 
-typedef int T_ID;
+typedef T_idObjecte<MAX_OBJ_X*MAX_OBJ_Y> T_ID;
 
 class Objecte {
 
 public:
     friend class Taulell;
 
-    T_ID treuId () { return id;}
-
     Objecte(); // Constructor
-    ~Objecte();
+    void CanviaColor(int x, int y, int z);
+    T_ID treuId () { return id;}
 
     virtual void assignaForma() = 0;
 
-protected: //per mantenir la integritat de les dades cal que només la classe Taulell pugui accedir a aquests procediments
 
-    void CanviaColor(int x, int y, int z);
+protected: //per mantenir la integritat de les dades cal que només la classe Taulell pugui accedir a aquests procediments
 
     void assignaId ( T_ID n) { id = n; }
 
@@ -46,14 +41,14 @@ protected: //per mantenir la integritat de les dades cal que només la classe Ta
     void RotaEsq() ;
     void RotaDret() ;
 
-    void Pinta();
-
-protected:
-    int NUM_QUADRES;
-    int coords[MAX_QUADRES][2];
+    void Pinta(wxPaintDC &dc, int mida_quadre, int PosActX, int PosActY);
 
 
 private:
+
+    int NUM_QUADRES;
+
+    int coords[MAX_QUADRES][2];
     //Una forma està formada per quatre quadres, cadascun d'ells amb coordenades x,y relatives ( no sobre del taulell)
     //al pivot de l'objecte
 
@@ -64,7 +59,13 @@ private:
 };
 
 
+class Objecte1:public Objecte
+{
 
+public:
+    Objecte1(); // Constructor
+    void assignaForma();
+};
 
 
 #endif

@@ -1,4 +1,10 @@
 #include <wx/wx.h>
+#include "taulell.h"
+#include "Objectes/Objecte1.h"
+#include "Objectes/Camara.h"
+#include <vector>
+#include <iostream>
+#include "Rutina.h"
 
 class Mwin : public wxFrame
 {
