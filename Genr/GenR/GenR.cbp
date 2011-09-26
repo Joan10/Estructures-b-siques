@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="GenR" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/GenR" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add option="`allegro-config --libs`" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/GenR" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="`allegro-config --libs --static`" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Linker>
+			<Add option="`allegro-config --libs --static`" />
+		</Linker>
+		<Unit filename="Controlador.cpp" />
+		<Unit filename="Controlador.h" />
+		<Unit filename="Objectes/Camara.cpp" />
+		<Unit filename="Objectes/Camara.h" />
+		<Unit filename="Objectes/Objecte1.cpp" />
+		<Unit filename="Objectes/Objecte1.h" />
+		<Unit filename="Punt.h" />
+		<Unit filename="Rutina.cpp" />
+		<Unit filename="Rutina.h" />
+		<Unit filename="behaviors.h" />
+		<Unit filename="interaccions.h" />
+		<Unit filename="joc.cpp" />
+		<Unit filename="joc.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="objecte.cpp" />
+		<Unit filename="objecte.h" />
+		<Unit filename="taulell.cpp" />
+		<Unit filename="taulell.h" />
+		<Unit filename="utils.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<lib_finder disable_auto="1" />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

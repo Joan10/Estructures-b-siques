@@ -1,0 +1,83 @@
+# depslib dependency file v1.0
+1316986851 source:/home/joan/Escriptori/Estructures-b-siques/Genr/GenR/Controlador.cpp
+	<allegro.h>
+	"Controlador.h"
+
+1316959267 /home/joan/Escriptori/Estructures-b-siques/Genr/GenR/Controlador.h
+	<list>
+	"taulell.h"
+	"objecte.h"
+	"Punt.h"
+
+1316957535 /home/joan/Escriptori/Estructures-b-siques/Genr/GenR/taulell.h
+	<stdio.h>
+	"objecte.h"
+	<pthread.h>
+	<typeinfo>
+	<math.h>
+
+1316989689 /home/joan/Escriptori/Estructures-b-siques/Genr/GenR/objecte.h
+	<vector>
+	<stdlib.h>
+	<stdio.h>
+	<algorithm>
+	"Punt.h"
+
+1316949992 /home/joan/Escriptori/Estructures-b-siques/Genr/GenR/Punt.h
+
+1316989425 source:/home/joan/Escriptori/Estructures-b-siques/Genr/GenR/Objectes/Camara.cpp
+	"Camara.h"
+
+1316987656 /home/joan/Escriptori/Estructures-b-siques/Genr/GenR/Objectes/Camara.h
+	"../taulell.h"
+	"../objecte.h"
+
+1316793572 source:/home/joan/Escriptori/Estructures-b-siques/Genr/GenR/Objectes/Objecte1.cpp
+	"Objecte1.h"
+
+1316643305 /home/joan/Escriptori/Estructures-b-siques/Genr/GenR/Objectes/Objecte1.h
+	"../objecte.h"
+
+1316642758 source:/home/joan/Escriptori/Estructures-b-siques/Genr/GenR/Rutina.cpp
+	"Rutina.h"
+	"utils.h"
+	<pthread.h>
+
+1316642411 /home/joan/Escriptori/Estructures-b-siques/Genr/GenR/Rutina.h
+	"taulell.h"
+	<list>
+
+1316957348 /home/joan/Escriptori/Estructures-b-siques/Genr/GenR/utils.h
+	"taulell.h"
+	"objecte.h"
+
+1316989770 source:/home/joan/Escriptori/Estructures-b-siques/Genr/GenR/joc.cpp
+	"joc.h"
+	"utils.h"
+	"behaviors.h"
+	"interaccions.h"
+	<stdio.h>
+
+1316956961 /home/joan/Escriptori/Estructures-b-siques/Genr/GenR/joc.h
+	<allegro.h>
+	"taulell.h"
+	"Objectes/Objecte1.h"
+	"Objectes/Camara.h"
+	<vector>
+	<iostream>
+	"Rutina.h"
+	"Controlador.h"
+
+1316949883 /home/joan/Escriptori/Estructures-b-siques/Genr/GenR/behaviors.h
+
+1316988366 /home/joan/Escriptori/Estructures-b-siques/Genr/GenR/interaccions.h
+
+1316987494 source:/home/joan/Escriptori/Estructures-b-siques/Genr/GenR/objecte.cpp
+	"objecte.h"
+
+1316988717 source:/home/joan/Escriptori/Estructures-b-siques/Genr/GenR/taulell.cpp
+	"taulell.h"
+
+1316956990 source:/home/joan/Escriptori/Estructures-b-siques/Genr/GenR/main.cpp
+	"joc.h"
+
