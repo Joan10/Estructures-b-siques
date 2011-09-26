@@ -18,6 +18,7 @@ class Controlador
     protected:
         Taulell *aT;
         list<Objecte*> L;
+        list<Objecte*>::iterator i;
 
 };
 

@@ -12,6 +12,7 @@ void Objecte1::assignaForma(){
 
     for (int i = 0; i<NUM_QUADRES; i++) {
             this->coords[i] = Punt (coordsTaula[i][0],coordsTaula[i][1]);
+            this->BBox.push_back(Punt (coordsTaula[i][0],coordsTaula[i][1]));
 
     }
 

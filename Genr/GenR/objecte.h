@@ -9,7 +9,7 @@
 #include <stdio.h>
 #include <algorithm>
 #include "Punt.h"
-
+#include <list>
 
 using namespace std;
 
@@ -54,12 +54,8 @@ protected: //per mantenir la integritat de les dades cal que només la classe Ta
     Punt coords[MAX_QUADRES]; //Coordenades relatives.
     Punt posabs; //Posició absoluta dins del món.
 
-
-    struct T_BoundingBox { //Coordenades relatives.
-        Punt pInfEsq;
-        Punt pSupDret;
-
-    }BBox;
+    list<Punt> BBox; //Coordenades relatives. Es tracta d'una llista que defineix els quadres que ocuparà l'objecte
+    list<Punt>::iterator i;
 
 private:
     //Una forma està formada per quatre quadres, cadascun d'ells amb coordenades x,y relatives ( no sobre del taulell)

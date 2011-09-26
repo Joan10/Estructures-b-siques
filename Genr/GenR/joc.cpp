@@ -18,7 +18,7 @@ Joc::Joc(int res_x, int res_y)
 
     //wxSize S = sb->GetClientSize();
 
-    Taulell *T = new Taulell(20, 20);
+    Taulell *T = new Taulell(40, 40);
 
     T->TaulellBuit();
 
@@ -32,13 +32,17 @@ Joc::Joc(int res_x, int res_y)
     Rutina *R1 = new Rutina(T);
     R1->CreaInteraccio(O1,O2, Interaccio_01);
 
-    Camara *C1 = new Camara(20,20,T);
+    Camara *C1 = new Camara(10,10,T);
     T->Posa(C1, Punt(6,6));
+
+    Camara *C2 = new Camara(25,25,T);
+    T->Posa(C2, Punt(20,20));
 
     Ctrl_Objecte *CO1 = new Ctrl_Objecte(T);
     CO1->AfegeixObjecte(O1);
     Ctrl_Objecte *CCam = new Ctrl_Objecte(T);
     CCam->AfegeixObjecte(C1);
+    CCam->AfegeixObjecte(C2);
 
     allegro_init();
     install_keyboard();
@@ -47,11 +51,14 @@ Joc::Joc(int res_x, int res_y)
 
     while( !key[KEY_ESC]){
         clear_keybuf();
-        CO1->Controla();
-        if (T->haCanviat()) C1->Pinta();
+        CCam->Controla();
+        if (T->haCanviat()) {
+            C1->Pinta(); C2->Pinta();
+
+        }
     }
 
-    R1->EliminaInteraccio(O1, O2);
+    //R1->EliminaInteraccio(O1, O2);
 
 }
 END_OF_MAIN();

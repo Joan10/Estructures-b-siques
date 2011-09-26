@@ -2,7 +2,7 @@
 
 //Camara::Camara(wxFrame *parent, int ampl, int alc, Taulell *Tref) : Objecte (),
 //
-//        wxPanel(parent,
+//        wxPanel(parent,list<Objecte*> L;
 //                wxID_ANY,
 //                wxDefaultPosition,
 //                wxSize(amplada_quadre * ampl, alcada_quadre*alc),
@@ -45,7 +45,7 @@ void Camara::Mou(Punt Desti)
 
     if (infx < 0) {
         infx = 0;
-        supx = amplada -1;
+        supx = amplada ;
     }
 
     if (infx >= (T->numQuadresX() )) {
@@ -55,7 +55,7 @@ void Camara::Mou(Punt Desti)
 
     if (infy < 0) {
         infy = 0;
-        supy = alcada -1;
+        supy = alcada ;
     }
 
     if (infy >= (T->numQuadresY() )) {

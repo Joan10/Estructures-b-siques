@@ -10,7 +10,6 @@ int main() {
 
 
  Joc *J1 = new Joc(RES_X, RES_Y);
- Joc *J2 = new Joc(RES_X, RES_Y);
  return 0;
 }
 

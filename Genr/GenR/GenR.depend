@@ -1,38 +1,39 @@
 # depslib dependency file v1.0
-1316986851 source:/home/joan/Escriptori/Estructures-b-siques/Genr/GenR/Controlador.cpp
+1317075628 source:/home/joan/Escriptori/Estructures-b-siques/Genr/GenR/Controlador.cpp
 	<allegro.h>
 	"Controlador.h"
 
-1316959267 /home/joan/Escriptori/Estructures-b-siques/Genr/GenR/Controlador.h
+1317075457 /home/joan/Escriptori/Estructures-b-siques/Genr/GenR/Controlador.h
 	<list>
 	"taulell.h"
 	"objecte.h"
 	"Punt.h"
 
-1316957535 /home/joan/Escriptori/Estructures-b-siques/Genr/GenR/taulell.h
+1317074933 /home/joan/Escriptori/Estructures-b-siques/Genr/GenR/taulell.h
 	<stdio.h>
 	"objecte.h"
 	<pthread.h>
 	<typeinfo>
 	<math.h>
 
-1316989689 /home/joan/Escriptori/Estructures-b-siques/Genr/GenR/objecte.h
+1317074317 /home/joan/Escriptori/Estructures-b-siques/Genr/GenR/objecte.h
 	<vector>
 	<stdlib.h>
 	<stdio.h>
 	<algorithm>
 	"Punt.h"
+	<list>
 
-1316949992 /home/joan/Escriptori/Estructures-b-siques/Genr/GenR/Punt.h
+1317074131 /home/joan/Escriptori/Estructures-b-siques/Genr/GenR/Punt.h
 
-1316989425 source:/home/joan/Escriptori/Estructures-b-siques/Genr/GenR/Objectes/Camara.cpp
+1317074485 source:/home/joan/Escriptori/Estructures-b-siques/Genr/GenR/Objectes/Camara.cpp
 	"Camara.h"
 
 1316987656 /home/joan/Escriptori/Estructures-b-siques/Genr/GenR/Objectes/Camara.h
 	"../taulell.h"
 	"../objecte.h"
 
-1316793572 source:/home/joan/Escriptori/Estructures-b-siques/Genr/GenR/Objectes/Objecte1.cpp
+1317072656 source:/home/joan/Escriptori/Estructures-b-siques/Genr/GenR/Objectes/Objecte1.cpp
 	"Objecte1.h"
 
 1316643305 /home/joan/Escriptori/Estructures-b-siques/Genr/GenR/Objectes/Objecte1.h
@@ -51,7 +52,7 @@
 	"taulell.h"
 	"objecte.h"
 
-1316989770 source:/home/joan/Escriptori/Estructures-b-siques/Genr/GenR/joc.cpp
+1317075695 source:/home/joan/Escriptori/Estructures-b-siques/Genr/GenR/joc.cpp
 	"joc.h"
 	"utils.h"
 	"behaviors.h"
@@ -72,12 +73,12 @@
 
 1316988366 /home/joan/Escriptori/Estructures-b-siques/Genr/GenR/interaccions.h
 
-1316987494 source:/home/joan/Escriptori/Estructures-b-siques/Genr/GenR/objecte.cpp
+1317074373 source:/home/joan/Escriptori/Estructures-b-siques/Genr/GenR/objecte.cpp
 	"objecte.h"
 
-1316988717 source:/home/joan/Escriptori/Estructures-b-siques/Genr/GenR/taulell.cpp
+1317074928 source:/home/joan/Escriptori/Estructures-b-siques/Genr/GenR/taulell.cpp
 	"taulell.h"
 
-1316956990 source:/home/joan/Escriptori/Estructures-b-siques/Genr/GenR/main.cpp
+1317074560 source:/home/joan/Escriptori/Estructures-b-siques/Genr/GenR/main.cpp
 	"joc.h"
 

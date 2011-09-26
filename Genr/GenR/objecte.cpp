@@ -74,10 +74,26 @@ void Objecte::Mou(Punt Desti) {
 bool Objecte::EmToca(Objecte *O, Punt Desti) //O és l'objecte que volem moure.
 {
 
-    T_BoundingBox tempBB = O->BBox;
-    tempBB.pInfEsq.set(tempBB.pInfEsq.x()+Desti.x(), tempBB.pInfEsq.y()+Desti.y());
-    tempBB.pSupDret.set(tempBB.pSupDret.x()+Desti.x(), tempBB.pSupDret.y()+Desti.y());
+    Punt A,B,C,D = Punt();
 
+    for (this->i = this->BBox.begin(); this->i != this->BBox.end(); ++this->i)
+    { //Per tots els quadres de l'objecte que no es mou
+        C = *this->i;
+        D = this->pos_abs();
+        B = C+D;
+        for (O->i = O->BBox.begin(); O->i != O->BBox.end(); ++O->i)
+        {//Per tots els quadres de l'objecte que volem moure
+
+            A.set(O->i->x()+Desti.x(),O->i->y()+Desti.y());
+            //Calculam la posició de la component de la bounding box en cas que s'arribés a moure
+
+            if (B == A) return true; //Comprovam si els punts coincideixen.
+
+        }
+
+    }
+
+    return false;
 
 
 

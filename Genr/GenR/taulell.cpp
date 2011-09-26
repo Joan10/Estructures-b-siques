@@ -336,10 +336,9 @@ bool Taulell::esPotMoure (Objecte *O,  Punt Desti){
 
             return false;
 
-        if (this->v_taulell[x][y].actiu == true) && !(O->SomElMateix(this->v_taulell[x][y].pO))
+        if ((this->v_taulell[x][y].actiu == true) && !(O->SomElMateix(this->v_taulell[x][y].pO))
+            && (v_taulell[x][y].pO->EmToca(O, Desti)))
             return false;
-
-        if (v_taulell[x][y].p0->EnsTocam(O))
         //EnsTocam dirà si, donats dos objectes, les seves boundingbox es tocaran al proxim moviment.
         it = O->it_seg(it);
     }

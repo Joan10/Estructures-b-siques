@@ -25,7 +25,11 @@ Ctrl_Objecte::Ctrl_Objecte(Taulell *T) : Controlador (T)
 
 void Ctrl_Objecte::Controla(){
 
-    Objecte *O = L.back();
+    Objecte *O;
+
+    for (i = L.begin(); i != L.end(); ++i) //recorrem tots els elements de la llista
+    {
+        O = *i;
 
         if ( key[KEY_DOWN]){
             aT->Mou(O, Punt(aT->Posicio(O).x(), aT->Posicio(O).y()+1));
@@ -36,7 +40,7 @@ void Ctrl_Objecte::Controla(){
         } else if ( key[KEY_LEFT]){
             aT->Mou(O, Punt(aT->Posicio(O).x()-1, aT->Posicio(O).y()));
         }
-
+    }
     while (key[KEY_DOWN] || key[KEY_UP] || key[KEY_RIGHT] || key[KEY_LEFT]) {};
 
    // while (keypressed()) { clear_keybuf(); printf("hola");}
